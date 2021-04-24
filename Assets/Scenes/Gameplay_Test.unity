@@ -164,6 +164,7 @@ GameObject:
   - component: {fileID: 216663389}
   - component: {fileID: 216663390}
   - component: {fileID: 216663391}
+  - component: {fileID: 216663392}
   m_Layer: 0
   m_Name: ThePillHolder
   m_TagString: Untagged
@@ -184,6 +185,7 @@ Transform:
   m_Children:
   - {fileID: 1803812842}
   - {fileID: 488754859}
+  - {fileID: 1621553098}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -222,6 +224,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2.5
   playerRigidbody2D: {fileID: 216663390}
+--- !u!114 &216663392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216663388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30319213d6851044c860881282df86e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firePoint: {fileID: 1621553099}
+  bulletPrefab: {fileID: 2409953788616069545, guid: 6c9dfa6f981442c4fab647a19b4fa4cf, type: 3}
+  cam: {fileID: 1569819045}
+  bulletForce: 4
 --- !u!1 &488754858
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,6 +580,58 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1621553097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1621553098}
+  - component: {fileID: 1621553099}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1621553098
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621553097}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.117, y: 0.054, z: 0}
+  m_LocalScale: {x: 0.0026468753, y: 0.00234385, z: 1}
+  m_Children: []
+  m_Father: {fileID: 216663389}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1621553099
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1621553097}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1803812841
 GameObject:
   m_ObjectHideFlags: 0

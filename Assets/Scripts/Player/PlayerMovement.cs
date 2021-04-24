@@ -6,15 +6,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 2f;
-
     [SerializeField] private Rigidbody2D playerRigidbody2D;
 
+    [SerializeField] private float moveSpeed = 2f;
+
     private Vector2 movement;
-    private void Start()
-    {
-        
-    }
 
     private void Update()
     {
