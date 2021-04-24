@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        playerRigidbody2D.MovePosition(playerRigidbody2D.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+        //playerRigidbody2D.MovePosition(playerRigidbody2D.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
+        playerRigidbody2D.AddForce(movement * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
     }
 }
