@@ -9,7 +9,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Camera cam;
 
-    [SerializeField] private float bulletSpeed = 4f;
+    //[SerializeField] private float bulletSpeed = 4f;
 
     private Vector2 mousePos;
     private Vector2 lookDirection;
@@ -39,8 +39,14 @@ public class PlayerShooting : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, cachedFirePointTransform.position, cachedFirePointTransform.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(cachedFirePointTransform.up * bulletSpeed, ForceMode2D.Impulse);
+        GameObject bullet = BulletPool.bulletPoolInstance.GetBullet();
+        bullet.transform.position = cachedFirePointTransform.position;
+        bullet.transform.rotation = cachedFirePointTransform.rotation;
+        bullet.GetComponent<Bullet>().SetDirection(cachedFirePointTransform.up);
+        bullet.SetActive(true);
+
+        //Instantiate(bulletPrefab, cachedFirePointTransform.position, cachedFirePointTransform.rotation);
+        //Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        //rb.AddForce(cachedFirePointTransform.up * bulletSpeed, ForceMode2D.Impulse);
     }
 }
