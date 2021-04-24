@@ -23,6 +23,9 @@ public class PlayerShooting : MonoBehaviour
 
     private void Update()
     {
+        //Camera Follow
+        //TODO: Bound at edges of scene
+        cam.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -10);
         MouseLook();
 
         if(Input.GetButtonDown("Fire1"))
@@ -43,6 +46,7 @@ public class PlayerShooting : MonoBehaviour
         bullet.transform.position = cachedFirePointTransform.position;
         bullet.transform.rotation = cachedFirePointTransform.rotation;
         bullet.GetComponent<Bullet>().SetDirection(cachedFirePointTransform.up);
+        bullet.GetComponent<Bullet>().setDamage(1);
         bullet.SetActive(true);
 
         //Instantiate(bulletPrefab, cachedFirePointTransform.position, cachedFirePointTransform.rotation);
