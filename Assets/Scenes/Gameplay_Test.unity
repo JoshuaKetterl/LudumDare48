@@ -163,6 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 216663389}
   - component: {fileID: 216663390}
+  - component: {fileID: 216663391}
   m_Layer: 0
   m_Name: ThePillHolder
   m_TagString: Untagged
@@ -184,7 +185,7 @@ Transform:
   - {fileID: 1803812842}
   - {fileID: 488754859}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &216663390
 Rigidbody2D:
@@ -207,6 +208,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &216663391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216663388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079e887f1b6ff99408d9fe521689d5ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2.5
+  playerRigidbody2D: {fileID: 216663390}
 --- !u!1 &488754858
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +477,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1569819043
 GameObject:
@@ -637,7 +652,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: ec7bfdbf8b6224245b634a28b518fba7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -1,18 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float moveSpeed = 2f;
+
+    [SerializeField] private Rigidbody2D playerRigidbody2D;
+
+    private Vector2 movement;
+    private void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+    }
+
+    private void FixedUpdate()
+    {
+        Move();
+    }
+
+    private void Move()
+    {
+        playerRigidbody2D.MovePosition(playerRigidbody2D.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
     }
 }
