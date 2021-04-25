@@ -34,6 +34,14 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Enemy"))
+        {
+            DealDamage();
+        }
+    }
+
     public void DealDamage()
     {
         if (vulnerable)
