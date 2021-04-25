@@ -56,7 +56,7 @@ public class PlayerShooting : MonoBehaviour
     private void Shoot()
     {
         // Get reusable bullet object from Bullet Pool
-        GameObject bullet = bulletPool.bulletPoolInstance.GetBullet();
+        GameObject bullet = bulletPool.GetBullet();
 
         //Set Bullet attributes
         bullet.transform.position = cachedFirePointTransform.position;

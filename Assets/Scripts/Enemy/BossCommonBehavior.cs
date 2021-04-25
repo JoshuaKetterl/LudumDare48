@@ -16,7 +16,7 @@ public class BossCommonBehavior : MonoBehaviour
     protected void Shoot(Transform origin, float moveSpeed, float ttl)
     {
         // Get reusable bullet object from Bullet Pool
-        GameObject bullet = bulletPool.bulletPoolInstance.GetBullet();
+        GameObject bullet = bulletPool.GetBullet();
 
         //Set Bullet attributes
         bullet.transform.position = origin.position;

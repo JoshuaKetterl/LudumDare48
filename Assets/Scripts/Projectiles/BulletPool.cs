@@ -4,18 +4,11 @@ using UnityEngine;
 
 public class BulletPool : MonoBehaviour
 {
-    public BulletPool bulletPoolInstance;
-
     [SerializeField]
     private GameObject pooledBullet;
     private bool notEnoughBulletsInPool = true;
 
     private List<GameObject> bullets;
-
-    private void Awake()
-    {
-        bulletPoolInstance = this;
-    }
 
     void Start()
     {
