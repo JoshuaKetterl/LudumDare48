@@ -7,13 +7,16 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D playerRigidbody2D;
-    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float moveSpeedDefault = 10f;
+    [SerializeField] private float moveSpeedSlowDown = 4f;
 
+    private float moveSpeed;
     private Vector2 movement;
 
     private void Start()
     {
         playerRigidbody2D.angularDrag = 5;
+        moveSpeed = moveSpeedDefault;
     }
 
     private void Update()
@@ -34,5 +37,18 @@ public class PlayerMovement : MonoBehaviour
 
         //Floaty Movement
         playerRigidbody2D.AddForce(movement.normalized * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("SlowDown"))
+        {
+            moveSpeed = moveSpeedSlowDown;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        moveSpeed = moveSpeedDefault;
     }
 }
