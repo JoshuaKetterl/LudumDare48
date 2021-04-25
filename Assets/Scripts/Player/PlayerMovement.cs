@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D playerRigidbody2D;
     [SerializeField] private float moveSpeedDefault = 10f;
-    [SerializeField] private float moveSpeedSlowDown = 4f;
+    [SerializeField] private float moveSpeedSlowDown = -7f;
     [SerializeField] private SpriteRenderer playerSpriteRenderer;
 
     private float moveSpeed;
@@ -53,7 +53,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.CompareTag("SlowDown"))
         {
-            moveSpeed = moveSpeedSlowDown;
+            //moveSpeed = moveSpeedSlowDown;
+            playerRigidbody2D.AddForce(new Vector2(moveSpeedSlowDown, 0) * Time.deltaTime, ForceMode2D.Impulse);
         }
     }
 
