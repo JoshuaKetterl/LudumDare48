@@ -5,14 +5,26 @@ using UnityEngine;
 public class TentacleAttack : BossCommonBehavior
 {
     [SerializeField] private Rigidbody2D firePoint;
+    [SerializeField] public Rigidbody2D rb2D;
+    [SerializeField] public GameObject FearBoss;
 
     private Transform cachedFirePointTransform;
 
     protected override void Start()
     {
         base.Start();
-
         cachedFirePointTransform = firePoint.transform;
+    }
+
+    private void OnEnable()
+    {
+        //Change this to be part of animation
+        Invoke(nameof(Remove), 4f);
+    }
+
+    public void setBulletPool(BulletPool bp)
+    {
+        base.bulletPool = bp;
     }
 
     private void SpreadShot()
@@ -52,5 +64,10 @@ public class TentacleAttack : BossCommonBehavior
 
         cachedFirePointTransform.eulerAngles = new Vector3(0, 0, 330f);
         base.Shoot(cachedFirePointTransform, 4f, 4f);
+    }
+
+    private void Remove()
+    {
+        gameObject.SetActive(false);
     }
 }
