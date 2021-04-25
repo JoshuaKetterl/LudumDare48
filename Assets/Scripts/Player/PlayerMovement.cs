@@ -7,9 +7,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D playerRigidbody2D;
-    [SerializeField] private float moveSpeed = 2f;
+    [SerializeField] private float moveSpeed = 10f;
 
     private Vector2 movement;
+
+    private void Start()
+    {
+        playerRigidbody2D.angularDrag = 5;
+    }
 
     private void Update()
     {
