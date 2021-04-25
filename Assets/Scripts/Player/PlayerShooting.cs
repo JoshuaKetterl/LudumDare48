@@ -19,6 +19,8 @@ public class PlayerShooting : MonoBehaviour
     private Transform cachedFirePointTransform;
 
     private bool canShoot = true;
+    private bool canSlowMo = true;
+
 
     private void Start()
     {
@@ -39,9 +41,18 @@ public class PlayerShooting : MonoBehaviour
             Invoke(nameof(Reload), reloadTime);
         }
 
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && canSlowMo)
         {
             SlowMo();
+            canSlowMo = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Pickup"))
+        {
+            canSlowMo = true;
         }
     }
 
