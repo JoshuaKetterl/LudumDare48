@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class BossCommonBehavior : MonoBehaviour
 {
+    private bool phaseTwo;
 
-    private void Shoot(Transform origin, float moveSpeed, float ttl)
+    protected virtual void Start()
+    {
+        PhaseOne();
+    }
+
+    public void Shoot(Transform origin, float moveSpeed, float ttl)
     {
         // Get reusable bullet object from Bullet Pool
         GameObject bullet = BulletPool.bulletPoolInstance.GetBullet();
@@ -21,5 +27,29 @@ public class BossCommonBehavior : MonoBehaviour
 
         //Activate bullet object (must happen last)
         bullet.SetActive(true);
+    }
+
+    public virtual void PhaseOne()
+    {
+        phaseTwo = false;
+        print("----------Phase One Initiated!-----------");
+    }
+
+    public virtual void PhaseTwo()
+    {
+        phaseTwo = true;
+        print("----------Phase Two Initiated!-----------");
+    }
+
+    public void OnKill()
+    {
+        //DEBUG
+        print("-------------Boss Destroyed!--------------");
+        gameObject.SetActive(false);
+    }
+
+    public bool InPhaseTwo()
+    {
+        return phaseTwo;
     }
 }

@@ -5,12 +5,12 @@ using UnityEngine;
 public class BossManager : MonoBehaviour
 {
     public static BossManager bossManagerInstance;
+    public BossCommonBehavior bossInstance;
 
-    [SerializeField] private float maxHP = 20;
+    [SerializeField] private float maxHP = 50;
     private float currentHP;
     private float phaseTwoHP;
 
-    private bool phaseTwo = false;
     private bool vulnerable;
 
     // Start is called before the first frame update
@@ -19,12 +19,6 @@ public class BossManager : MonoBehaviour
         vulnerable = true;
         currentHP = maxHP;
         phaseTwoHP = maxHP / 2;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public float GetHP()
@@ -38,15 +32,14 @@ public class BossManager : MonoBehaviour
         {
             currentHP -= dmg;
 
-            if (!phaseTwo && currentHP <= phaseTwoHP)
+            if (!bossInstance.InPhaseTwo() && currentHP <= phaseTwoHP)
             {
-                phaseTwo = true;
-                OnPhaseTwo();
+                bossInstance.PhaseTwo();
             }
             else if (currentHP <= 0)
             {
                 vulnerable = false;
-                OnKill();
+                bossInstance.OnKill();
             }
             else
             {
@@ -61,16 +54,4 @@ public class BossManager : MonoBehaviour
         }
     }
 
-    private void OnPhaseTwo()
-    {
-        //DEBUG
-        print("----------Phase Two Initiated!-----------");
-    }
-
-    private void OnKill()
-    {
-        //DEBUG
-        print("-------------Boss Destroyed!--------------");
-        gameObject.SetActive(false);
-    }
 }

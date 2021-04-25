@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     [SerializeField] private int maxHP = 3;
-    [SerializeField] private float invWindow = 2f;
+    [SerializeField] private float invWindow = 1f;
 
     private int currentHP;
     private bool vulnerable;

@@ -29,6 +29,6 @@ public class PlayerMovement : MonoBehaviour
         //playerRigidbody2D.MovePosition(playerRigidbody2D.position + movement.normalized * moveSpeed * Time.fixedDeltaTime);
 
         //Floaty Movement
-        playerRigidbody2D.AddForce(movement * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
+        playerRigidbody2D.AddForce(movement.normalized * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
     }
 }

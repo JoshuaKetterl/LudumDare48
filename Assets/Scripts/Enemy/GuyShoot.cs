@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GuyShoot : MonoBehaviour
+public class GuyShoot : BossCommonBehavior
 {
 
     [SerializeField] private Rigidbody2D firePoint;
-    [SerializeField] private float reloadTime = 1.5f;
+    [SerializeField] private Rigidbody2D guyBody;
+    [SerializeField] private float reloadTime;
 
     private Vector2 targetPos;
     private Vector2 lookDirection;
@@ -15,45 +16,72 @@ public class GuyShoot : MonoBehaviour
     private Transform target;
 
     private bool canShoot = false;
+    private float moveSpeed;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         cachedFirePointTransform = firePoint.transform;
         target = GameObject.FindGameObjectWithTag("Player").transform;
 
         Invoke("Reload", reloadTime * 2);
     }
 
-    private void Update()
+    public override void PhaseOne()
     {
+        base.PhaseOne();
+        reloadTime = 1.5f;
+        moveSpeed = .2f;
+    }
+
+    public override void PhaseTwo()
+    {
+        base.PhaseTwo();
+        CancelInvoke();
+        Reload();
+        reloadTime = .2f;
+        moveSpeed = 1.2f;
+    }
+
+    private void FixedUpdate()
+    {
+        targetPos = target.position;
+        lookDirection = targetPos - firePoint.position;
+
+        guyBody.MovePosition(guyBody.position + (targetPos - guyBody.position).normalized * Time.deltaTime * moveSpeed);
 
         if (canShoot)
         {
-            Shoot();
+            if (base.InPhaseTwo())
+                SpreadShot();
+            else
+                SingleShot();
             canShoot = false;
             Invoke("Reload", reloadTime);
         }
     
     }
-
-    private void Shoot()
+    private void SingleShot()
     {
-        targetPos = target.position;
-        lookDirection = targetPos - firePoint.position;
         float angle = (Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg) - 90f;
+
         cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle);
+        base.Shoot(cachedFirePointTransform, 1.2f, 4f);
+    }
 
-        GameObject bullet = BulletPool.bulletPoolInstance.GetBullet();
-        bullet.transform.position = cachedFirePointTransform.position;
-        bullet.transform.rotation = cachedFirePointTransform.rotation;
-        Bullet b = bullet.GetComponent<Bullet>();
-            b.SetDirection(cachedFirePointTransform.up);
-            b.SetSpeed(1.5f);
-            b.SetHostility(true);
-            b.SetTimeToLive(2);
+    private void SpreadShot()
+    {
+        float angle = (Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg) - 90f;
 
-        //Activate bullet object (must happen last)
-        bullet.SetActive(true);
+        cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle-30f);
+        base.Shoot(cachedFirePointTransform, 4f, 4f);
+
+        cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle);
+        base.Shoot(cachedFirePointTransform, 5f, 4f);
+
+        cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle+30f);
+        base.Shoot(cachedFirePointTransform, 4f, 4f);
     }
 
     private void Reload()
