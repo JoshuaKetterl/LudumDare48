@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
 
     private void OnEnable()
     {
-        Invoke("Remove", timeToLive);
+        Invoke(nameof(Remove), timeToLive);
         rb2D.AddForce(direction * moveSpeed, ForceMode2D.Impulse);
     }
 
@@ -49,12 +49,12 @@ public class Bullet : MonoBehaviour
         //like an explosion for example
         //print("Bullet Collision Detected");
 
-        if (!hostile && collision.tag.Equals("Enemy"))
+        if (!hostile && collision.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<BossManager>().DealDamage(damage);
             Remove();
         }
-        else if (hostile && collision.tag.Equals("Player"))
+        else if (hostile && collision.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerManager>().DealDamage();
         }

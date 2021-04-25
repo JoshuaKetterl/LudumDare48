@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (vulnerable && collision.CompareTag("Enemy"))
+        if (vulnerable && (collision.CompareTag("Enemy") || collision.CompareTag("EnemyBullet")))
         {
             DealDamage();
         }
