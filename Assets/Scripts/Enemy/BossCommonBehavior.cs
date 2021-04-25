@@ -11,7 +11,7 @@ public class BossCommonBehavior : MonoBehaviour
         PhaseOne();
     }
 
-    public void Shoot(Transform origin, float moveSpeed, float ttl)
+    protected void Shoot(Transform origin, float moveSpeed, float ttl)
     {
         // Get reusable bullet object from Bullet Pool
         GameObject bullet = BulletPool.bulletPoolInstance.GetBullet();

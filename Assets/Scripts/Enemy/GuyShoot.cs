@@ -47,7 +47,7 @@ public class GuyShoot : BossCommonBehavior
         Instantiate(rickRoll);
     }
 
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         targetPos = target.position;
         lookDirection = targetPos - firePoint.position;

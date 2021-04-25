@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (vulnerable && collision.tag.Equals("Enemy"))
+        if (vulnerable && collision.CompareTag("Enemy"))
         {
             DealDamage();
         }
@@ -39,7 +39,7 @@ public class PlayerManager : MonoBehaviour
             {
                 //trigger invulnerability window
                 vulnerable = false;
-                Invoke("makeVulnerable", invWindow);
+                Invoke("MakeVulnerable", invWindow);
                 print("Player HP: " + currentHP + " / " + maxHP);
             }
         }
@@ -50,7 +50,7 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void Heal()
+    private void Heal()
     {
         if (currentHP < maxHP)
             currentHP++;
@@ -59,21 +59,16 @@ public class PlayerManager : MonoBehaviour
         print("Player HP: " + currentHP + " / " + maxHP);
     }
 
-    public void OnDeath()
+    private void OnDeath()
     {
         //Debug
         print("Player has died!");
         gameObject.SetActive(false);
     }
 
-    private void makeVulnerable()
+    private void MakeVulnerable()
     {
+        //End Invulnerability Window
         vulnerable = true;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
