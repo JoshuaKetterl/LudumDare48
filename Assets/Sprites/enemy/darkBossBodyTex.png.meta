@@ -1,81 +1,63 @@
 fileFormatVersion: 2
-guid: f87fcbb2fb540954882c4207de37637b
+guid: 630619201bbbedf4fb49372dcb4d77ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3767635004007277846
-    second: groundBreak_0
+      213: -2028985664505715706
+    second: darkBossBody_0
   - first:
-      213: 2047560940722958538
-    second: groundBreak_1
+      213: 4193408780027569745
+    second: darkBossBody_1
   - first:
-      213: -7362693786336319281
-    second: groundBreak_2
+      213: -996604152324036078
+    second: darkBossBody_2
   - first:
-      213: -6864193345608936824
-    second: groundBreak_3
+      213: -3468288882385362171
+    second: darkBossBody_3
   - first:
-      213: 704594283023802257
-    second: groundBreak_4
+      213: -5836707592260721014
+    second: darkBossBody_4
   - first:
-      213: -1854172315679794421
-    second: groundBreak_5
+      213: -8692999171838701337
+    second: darkBossBody_5
   - first:
-      213: -7421041504186028909
-    second: groundBreak_6
+      213: -3720727967708037790
+    second: darkBossBody_6
   - first:
-      213: 3085272291244890104
-    second: groundBreak_7
+      213: -2584741856747944767
+    second: darkBossBody_7
   - first:
-      213: 2813588210447146014
-    second: groundBreak_8
+      213: -3178050962789243825
+    second: darkBossBody_8
   - first:
-      213: 585033557727330223
-    second: groundBreak_9
+      213: 1017954787468541783
+    second: darkBossBody_9
   - first:
-      213: 287815374940578875
-    second: groundBreak_10
+      213: -1485523289135287610
+    second: darkBossBody_10
   - first:
-      213: 2543953796809631247
-    second: groundBreak_11
+      213: 3968575312802261218
+    second: darkBossBody_11
   - first:
-      213: 4620846482530138732
-    second: groundBreak_12
+      213: 126246945175071301
+    second: darkBossBody_12
   - first:
-      213: 7829478905571869056
-    second: groundBreak_13
+      213: 1035272073344735662
+    second: darkBossBody_13
   - first:
-      213: -4048956685108806149
-    second: groundBreak_14
+      213: 9152205609880937874
+    second: darkBossBody_14
   - first:
-      213: -4702007660540741193
-    second: groundBreak_15
+      213: 2698854536258757115
+    second: darkBossBody_15
   - first:
-      213: 1812924742900905649
-    second: groundBreak_16
-  - first:
-      213: 7025173033896904256
-    second: groundBreak_17
-  - first:
-      213: -2238359014986897020
-    second: groundBreak_18
-  - first:
-      213: -8202498997178893098
-    second: groundBreak_19
-  - first:
-      213: 9177849862546214881
-    second: groundBreak_20
-  - first:
-      213: 5124829496172773721
-    second: groundBreak_21
-  - first:
-      213: -8907843578325238447
-    second: groundBreak_22
+      213: 349763203227589685
+    second: darkBossBody_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -104,8 +86,8 @@ TextureImporter:
     filterMode: 0
     aniso: -1
     mipBias: -100
-    wrapU: 1
-    wrapV: 1
+    wrapU: -1
+    wrapV: -1
     wrapW: -1
   nPOTScale: 0
   lightmap: 0
@@ -119,9 +101,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 0
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -136,10 +118,10 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -148,10 +130,10 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -160,10 +142,10 @@ TextureImporter:
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -172,10 +154,10 @@ TextureImporter:
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -184,13 +166,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: groundBreak_0
+      name: darkBossBody_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -198,41 +180,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aea91d6fceba6bbc0800000000000000
-      internalID: -3767635004007277846
+      spriteID: 604e6c4c94897d3e0800000000000000
+      internalID: -2028985664505715706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: groundBreak_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ac0b1cfb3d56a6c10800000000000000
-      internalID: 2047560940722958538
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: groundBreak_2
+      name: darkBossBody_1
       rect:
         serializedVersion: 2
         x: 256
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,41 +201,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc8a273b20572d990800000000000000
-      internalID: -7362693786336319281
+      spriteID: 1562c8b511bf13a30800000000000000
+      internalID: 4193408780027569745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: groundBreak_3
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 882116d258c7db0a0800000000000000
-      internalID: -6864193345608936824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: groundBreak_4
+      name: darkBossBody_2
       rect:
         serializedVersion: 2
         x: 512
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -282,41 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19f976e64c837c900800000000000000
-      internalID: 704594283023802257
+      spriteID: 21aeb0fbdc95b22f0800000000000000
+      internalID: -996604152324036078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: groundBreak_5
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0bda8b4a18a446e0800000000000000
-      internalID: -1854172315679794421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: groundBreak_6
+      name: darkBossBody_3
       rect:
         serializedVersion: 2
         x: 768
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -324,41 +243,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39caf8ff11a230990800000000000000
-      internalID: -7421041504186028909
+      spriteID: 503ebf223a92edfc0800000000000000
+      internalID: -3468288882385362171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: groundBreak_7
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f7d10b6dc611da20800000000000000
-      internalID: 3085272291244890104
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: groundBreak_8
+      name: darkBossBody_4
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,41 +264,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1cdde3029fdb0720800000000000000
-      internalID: 2813588210447146014
+      spriteID: a8669797e59dffea0800000000000000
+      internalID: -5836707592260721014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: groundBreak_9
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: faf350ecbe47e1800800000000000000
-      internalID: 585033557727330223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: groundBreak_10
+      name: darkBossBody_5
       rect:
         serializedVersion: 2
         x: 1280
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -408,41 +285,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b34aa300f868ef300800000000000000
-      internalID: 287815374940578875
+      spriteID: 7e01ac98f434c5780800000000000000
+      internalID: -8692999171838701337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: groundBreak_11
-      rect:
-        serializedVersion: 2
-        x: 1408
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0628dfef70fd4320800000000000000
-      internalID: 2543953796809631247
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: groundBreak_12
+      name: darkBossBody_6
       rect:
         serializedVersion: 2
         x: 1536
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,41 +306,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6a72d0c46b802040800000000000000
-      internalID: 4620846482530138732
+      spriteID: 26db6ea60a15d5cc0800000000000000
+      internalID: -3720727967708037790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: groundBreak_13
-      rect:
-        serializedVersion: 2
-        x: 1664
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 081860f0595e7ac60800000000000000
-      internalID: 7829478905571869056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: groundBreak_14
+      name: darkBossBody_7
       rect:
         serializedVersion: 2
         x: 1792
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -492,41 +327,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfd7521e8573fc7c0800000000000000
-      internalID: -4048956685108806149
+      spriteID: 1c48470d9f6212cd0800000000000000
+      internalID: -2584741856747944767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: groundBreak_15
-      rect:
-        serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b9bd4ee1fc1fbeb0800000000000000
-      internalID: -4702007660540741193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: groundBreak_16
+      name: darkBossBody_8
       rect:
         serializedVersion: 2
         x: 2048
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -534,41 +348,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b6ff19c27dc82910800000000000000
-      internalID: 1812924742900905649
+      spriteID: f44ebd4cc7b45e3d0800000000000000
+      internalID: -3178050962789243825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: groundBreak_17
-      rect:
-        serializedVersion: 2
-        x: 2176
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 046041347ad6e7160800000000000000
-      internalID: 7025173033896904256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: groundBreak_18
+      name: darkBossBody_9
       rect:
         serializedVersion: 2
         x: 2304
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -576,41 +369,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 489a9efc550cfe0e0800000000000000
-      internalID: -2238359014986897020
+      spriteID: 75f78706c70802e00800000000000000
+      internalID: 1017954787468541783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: groundBreak_19
-      rect:
-        serializedVersion: 2
-        x: 2432
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6dc77aaee9eda2e80800000000000000
-      internalID: -8202498997178893098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: groundBreak_20
+      name: darkBossBody_10
       rect:
         serializedVersion: 2
         x: 2560
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -618,41 +390,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ef4fead2d54e5f70800000000000000
-      internalID: 9177849862546214881
+      spriteID: 6c2758d607c526be0800000000000000
+      internalID: -1485523289135287610
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: groundBreak_21
-      rect:
-        serializedVersion: 2
-        x: 2688
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95182d5364d0f1740800000000000000
-      internalID: 5124829496172773721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: groundBreak_22
+      name: darkBossBody_11
       rect:
         serializedVersion: 2
         x: 2816
         y: 0
-        width: 128
-        height: 128
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -660,8 +411,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15dfd27167bf06480800000000000000
-      internalID: -8907843578325238447
+      spriteID: 2e8a6f77836331730800000000000000
+      internalID: 3968575312802261218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBossBody_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a63218de480c100800000000000000
+      internalID: 126246945175071301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBossBody_13
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9589137760e5e00800000000000000
+      internalID: 1035272073344735662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBossBody_14
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2956a40038a230f70800000000000000
+      internalID: 9152205609880937874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBossBody_15
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1a72ec6e1447520800000000000000
+      internalID: 2698854536258757115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkBossBody_16
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c12ebb7cb9ad400800000000000000
+      internalID: 349763203227589685
       vertices: []
       indices: 
       edges: []
@@ -669,7 +525,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: eac92f49250cdf34ea739ea134161feb
+    spriteID: 3432fc1791cc6714da416c17510a7c1f
     internalID: 0
     vertices: []
     indices: 
