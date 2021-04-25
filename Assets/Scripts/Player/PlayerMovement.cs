@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D playerRigidbody2D;
     [SerializeField] private float moveSpeedDefault = 10f;
     [SerializeField] private float moveSpeedSlowDown = 4f;
+    [SerializeField] private SpriteRenderer playerSpriteRenderer;
 
     private float moveSpeed;
     private Vector2 movement;
@@ -28,6 +29,15 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        Flip();
+    }
+
+    private void Flip()
+    {
+        if (movement.x < 0)
+            playerSpriteRenderer.flipX = true;
+        else if (movement.x > 0)
+            playerSpriteRenderer.flipX = false;
     }
 
     private void Move()
