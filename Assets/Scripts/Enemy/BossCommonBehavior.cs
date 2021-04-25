@@ -4,56 +4,22 @@ using UnityEngine;
 
 public class BossCommonBehavior : MonoBehaviour
 {
-    public float hitpointsMax;
-    public float hitpointsCur;
 
-    private float phaseTwoHP;
-    private bool phaseTwo = false;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Shoot(Transform origin, float moveSpeed, float ttl)
     {
-        hitpointsMax = 20;
-        hitpointsCur = hitpointsMax;
-        phaseTwoHP = hitpointsMax / 2;
-    }
+        // Get reusable bullet object from Bullet Pool
+        GameObject bullet = BulletPool.bulletPoolInstance.GetBullet();
 
-    public float getHP()
-    {
-        return hitpointsCur;
-    }
+        //Set Bullet attributes
+        bullet.transform.position = origin.position;
+        bullet.transform.rotation = origin.rotation;
+        Bullet b = bullet.GetComponent<Bullet>();
+            b.SetDirection(origin.up);
+            b.SetSpeed(moveSpeed);
+            b.SetHostility(true);
+            b.SetTimeToLive(ttl);
 
-    public void dealDamage(float dmg)
-    {
-        hitpointsCur -= dmg;
-
-        if (!phaseTwo && hitpointsCur <= phaseTwoHP)
-        {
-            phaseTwo = true;
-            onPhaseTwo();
-        }
-        if (hitpointsCur <= 0)
-            onKill();
-        else
-            //DEBUG
-            print("Remaining HP: " + hitpointsCur + " / " + hitpointsMax);
-    }
-
-    private void onPhaseTwo()
-    {
-        //DEBUG
-        print("----------Phase Two Initiated!-----------");
-    }
-
-    private void onKill()
-    {
-        //DEBUG
-        print("-------------Boss Destroyed!--------------");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //Activate bullet object (must happen last)
+        bullet.SetActive(true);
     }
 }

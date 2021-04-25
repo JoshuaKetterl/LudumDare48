@@ -163,6 +163,8 @@ GameObject:
   m_Component:
   - component: {fileID: 216663389}
   - component: {fileID: 216663390}
+  - component: {fileID: 216663394}
+  - component: {fileID: 216663393}
   - component: {fileID: 216663391}
   - component: {fileID: 216663392}
   m_Layer: 0
@@ -239,6 +241,38 @@ MonoBehaviour:
   firePoint: {fileID: 1621553099}
   bulletPrefab: {fileID: 2409953788616069545, guid: 6c9dfa6f981442c4fab647a19b4fa4cf, type: 3}
   cam: {fileID: 1569819045}
+  reloadTime: 0.25
+  bulletSpeed: 4
+--- !u!114 &216663393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216663388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ffeb83f4738bd4aa760cccd08d142a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 3
+  invWindow: 2
+--- !u!58 &216663394
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216663388}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.020446718, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.10640055
 --- !u!1 &488754858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,12 +1043,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896850288}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b57344bce7e27f646a15538864e051a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1957763589}
+  reloadTime: 1.5
 --- !u!114 &1896850292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,11 +1059,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1896850288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3f8e11b31ce44f4986e1a90b101388f, type: 3}
+  m_Script: {fileID: 11500000, guid: a30b0fda32b31084d867c46aac91db10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitpointsMax: 0
-  hitpointsCur: 0
+  maxHP: 20
 --- !u!1 &1957763587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,7 +1153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960931074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.28685445, y: 0.08371919, z: -0.30993724}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

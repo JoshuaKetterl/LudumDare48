@@ -5,8 +5,9 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private Vector2 direction;
-    private float damage = 1;
-    private float moveSpeed = 3f;
+    private bool hostile;
+    private float damage;
+    private float moveSpeed;
     private float timeToLive = 2f;
 
     [SerializeField] private Rigidbody2D rb2D;
@@ -22,19 +23,24 @@ public class Bullet : MonoBehaviour
         direction = dir;
     }
 
-    public void setSpeed(float spd)
+    public void SetSpeed(float spd)
     {
         moveSpeed = spd;
     }
 
-    public void setDamage(float dmg)
+    public void SetDamage(float dmg)
     {
         damage = dmg;
     }
 
-    public void setTimeToLive(float ttl)
+    public void SetTimeToLive(float ttl)
     {
         timeToLive = ttl;
+    }
+
+    public void SetHostility(bool h)
+    {
+        hostile = h;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,12 +49,15 @@ public class Bullet : MonoBehaviour
         //like an explosion for example
         //print("Bullet Collision Detected");
 
-        if (collision.tag.Equals("Enemy"))
+        if (!hostile && collision.tag.Equals("Enemy"))
         {
-            collision.gameObject.GetComponent<BossCommonBehavior>().dealDamage(damage);
+            collision.gameObject.GetComponent<BossManager>().DealDamage(damage);
+            Remove();
         }
-        Remove();
-
+        else if (hostile && collision.tag.Equals("Player"))
+        {
+            collision.gameObject.GetComponent<PlayerManager>().DealDamage();
+        }
     }
 
     private void Remove()
