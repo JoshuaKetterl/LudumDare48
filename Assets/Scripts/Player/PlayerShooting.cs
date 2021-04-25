@@ -8,6 +8,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private Rigidbody2D firePoint;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Camera cam;
+    [SerializeField] private BulletPool bulletPool;
     [SerializeField] private float reloadTime = 0.25f;
     [SerializeField] private float bulletSpeed = 4f;
     [SerializeField] private float slowMoDuration = 3f;
@@ -55,7 +56,7 @@ public class PlayerShooting : MonoBehaviour
     private void Shoot()
     {
         // Get reusable bullet object from Bullet Pool
-        GameObject bullet = BulletPool.bulletPoolInstance.GetBullet();
+        GameObject bullet = bulletPool.bulletPoolInstance.GetBullet();
 
         //Set Bullet attributes
         bullet.transform.position = cachedFirePointTransform.position;

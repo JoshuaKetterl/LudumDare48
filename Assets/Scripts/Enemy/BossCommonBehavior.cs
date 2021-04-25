@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BossCommonBehavior : MonoBehaviour
 {
+    [SerializeField] private BulletPool bulletPool;
+
     private bool phaseTwo;
 
     protected virtual void Start()
@@ -14,7 +16,7 @@ public class BossCommonBehavior : MonoBehaviour
     protected void Shoot(Transform origin, float moveSpeed, float ttl)
     {
         // Get reusable bullet object from Bullet Pool
-        GameObject bullet = BulletPool.bulletPoolInstance.GetBullet();
+        GameObject bullet = bulletPool.bulletPoolInstance.GetBullet();
 
         //Set Bullet attributes
         bullet.transform.position = origin.position;
