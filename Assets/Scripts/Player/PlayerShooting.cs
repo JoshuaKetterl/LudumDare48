@@ -10,6 +10,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private Camera cam;
     [SerializeField] private float reloadTime = 0.25f;
     [SerializeField] private float bulletSpeed = 4f;
+    [SerializeField] private float slowMoDuration = 3f;
 
     private Vector2 mousePos;
     private Vector2 lookDirection;
@@ -30,13 +31,17 @@ public class PlayerShooting : MonoBehaviour
         cam.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -10);
         MouseLook();
 
-        if(canShoot && Input.GetButton("Fire1"))
+        if(canShoot && Input.GetButtonDown("Fire1"))
         {
             Shoot();
             canShoot = false;
             Invoke("Reload", reloadTime);
         }
 
+        if (Input.GetButtonDown("Fire2"))
+        {
+            SlowMo();
+        }
     }
 
     private void MouseLook()
@@ -72,5 +77,21 @@ public class PlayerShooting : MonoBehaviour
     private void Reload()
     {
         canShoot = true;
+    }
+
+    private void SlowMo()
+    {
+        StartCoroutine(SlowMoCoroutine());
+    }
+
+    IEnumerator SlowMoCoroutine()
+    {
+        Time.timeScale = 0.6f;
+
+        print("Coroutine started");
+        yield return new WaitForSeconds(slowMoDuration);
+        
+        print("Coroutine ended");
+        Time.timeScale = 1f;
     }
 }
