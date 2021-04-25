@@ -25,6 +25,15 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Pickup"))
+        {
+            collision.gameObject.SetActive(false);
+            Heal();
+        }
+    }
+
     public void DealDamage()
     {
         if (vulnerable)
