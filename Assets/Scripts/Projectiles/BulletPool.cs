@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BulletPool : MonoBehaviour
 {
-
     public static BulletPool bulletPoolInstance;
 
     [SerializeField]
@@ -44,11 +43,5 @@ public class BulletPool : MonoBehaviour
             return b;
         }
         return null;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
