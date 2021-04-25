@@ -32,7 +32,7 @@ public class PlayerShooting : MonoBehaviour
         cam.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -10);
         MouseLook();
 
-        if(canShoot && Input.GetButtonDown("Fire1") && !PauseMenu.IsGamePaused)
+        if(canShoot && Input.GetButton("Fire1") && !PauseMenu.IsGamePaused)
         {
             Shoot();
             canShoot = false;
