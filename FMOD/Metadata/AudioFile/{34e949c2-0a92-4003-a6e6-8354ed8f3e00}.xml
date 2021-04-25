@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{34e949c2-0a92-4003-a6e6-8354ed8f3e00}">
+		<property name="assetPath">
+			<value>Phase 2 - Trimmed.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.926825396825397</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a6dc9c1b-d2c7-43c4-b438-1e7a9ec2e61a}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{666ac7c4-b41d-4a95-9cca-b9d413173779}">
+		<property name="name">
+			<value>Music Boss Beaten</value>
+		</property>
+		<relationship name="folder">
+			<destination>{65053029-af0a-4346-944d-5efc6b47478a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{625e225e-9ea9-4cd6-90c5-501799a55faa}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{625e225e-9ea9-4cd6-90c5-501799a55faa}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

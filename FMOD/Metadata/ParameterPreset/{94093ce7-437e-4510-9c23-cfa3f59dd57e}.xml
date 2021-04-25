@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{94093ce7-437e-4510-9c23-cfa3f59dd57e}">
+		<property name="name">
+			<value>Music Phase 2</value>
+		</property>
+		<relationship name="folder">
+			<destination>{65053029-af0a-4346-944d-5efc6b47478a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a614f1ed-e233-437c-864e-9c401ce8ee51}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a614f1ed-e233-437c-864e-9c401ce8ee51}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
