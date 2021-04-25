@@ -1052,6 +1052,7 @@ MonoBehaviour:
   firePoint: {fileID: 1957763589}
   guyBody: {fileID: 1896850293}
   reloadTime: 1.5
+  rickRoll: {fileID: 6024057262728332311, guid: 218442bbe3c66c44b99c7bb5cf8f3642, type: 3}
 --- !u!114 &1896850292
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class GuyShoot : BossCommonBehavior
     [SerializeField] private Rigidbody2D firePoint;
     [SerializeField] private Rigidbody2D guyBody;
     [SerializeField] private float reloadTime;
+    [SerializeField] private GameObject rickRoll;
 
     private Vector2 targetPos;
     private Vector2 lookDirection;
@@ -42,6 +43,8 @@ public class GuyShoot : BossCommonBehavior
         Reload();
         reloadTime = .2f;
         moveSpeed = 1.2f;
+
+        Instantiate(rickRoll);
     }
 
     private void FixedUpdate()
