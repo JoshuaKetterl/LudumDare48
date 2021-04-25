@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    private void Resume()
+    public void Resume()
     {
         pausedMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -31,5 +31,16 @@ public class PauseMenu : MonoBehaviour
         pausedMenuUI.SetActive(true);
         Time.timeScale = 0f;
         IsGamePaused = true;
+    }
+
+    public void SettingsButton()
+    {
+        print("Settings Menu");
+    }
+
+    public void QuitGame()
+    {
+        print("Quit");
+        Application.Quit();
     }
 }
