@@ -36,7 +36,7 @@ public class PlayerShooting : MonoBehaviour
         {
             Shoot();
             canShoot = false;
-            Invoke("Reload", reloadTime);
+            Invoke(nameof(Reload), reloadTime);
         }
 
         if (Input.GetButtonDown("Fire2"))

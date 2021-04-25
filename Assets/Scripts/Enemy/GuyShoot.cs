@@ -26,7 +26,7 @@ public class GuyShoot : BossCommonBehavior
         cachedFirePointTransform = firePoint.transform;
         target = GameObject.FindGameObjectWithTag("Player").transform;
 
-        Invoke("Reload", reloadTime * 2);
+        Invoke(nameof(Reload), reloadTime * 2);
     }
 
     public override void PhaseOne()
@@ -61,7 +61,7 @@ public class GuyShoot : BossCommonBehavior
             else
                 SingleShot();
             canShoot = false;
-            Invoke("Reload", reloadTime);
+            Invoke(nameof(Reload), reloadTime);
         }
     
     }
