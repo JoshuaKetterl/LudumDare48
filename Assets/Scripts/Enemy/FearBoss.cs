@@ -8,6 +8,7 @@ public class FearBoss : BossCommonBehavior
     [SerializeField] private GameObject pooledTentacle;
     [SerializeField] private List<Transform> tpLocations;
     [SerializeField] private List<Transform> tentacleLocations;
+    [SerializeField] private Animator animator;
 
     [FMODUnity.EventRef]
     public string RoarEvent = "";
@@ -38,6 +39,7 @@ public class FearBoss : BossCommonBehavior
     {
         tentacles = new List<TentacleAttack>();
         cachedFirePointTransform = firePoint.transform;
+        animator = gameObject.GetComponentInChildren<Animator>();
 
         target = GameObject.FindGameObjectWithTag("Player").transform;
         targetRB = target.gameObject.GetComponent<Rigidbody2D>();
@@ -69,6 +71,7 @@ public class FearBoss : BossCommonBehavior
             {
                 int locationIndex = Random.Range(1, tpLocationsSize);
                 transform.position = tpLocations[locationIndex].position;
+                animator.SetTrigger("ScreamTrigger");
 
                 for (int i = 0; i < tentacleLocationsSize; i++)
                 {
