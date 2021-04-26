@@ -56,7 +56,7 @@ public class PlayerManager : MonoBehaviour
             {
                 //trigger invulnerability window
                 vulnerable = false;
-                Invoke("MakeVulnerable", invWindow);
+                Invoke(nameof(MakeVulnerable), invWindow);
                 print("Player HP: " + currentHP + " / " + maxHP);
             }
         }
