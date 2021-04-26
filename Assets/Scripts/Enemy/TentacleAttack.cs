@@ -5,6 +5,7 @@ using UnityEngine;
 public class TentacleAttack : BossCommonBehavior
 {
     [SerializeField] private Rigidbody2D firePoint;
+    [FMODUnity.EventRef] public string SurfaceEvent = "";
 
     private Transform cachedFirePointTransform;
     private float ttl = 3f;
@@ -18,6 +19,7 @@ public class TentacleAttack : BossCommonBehavior
     private void OnEnable()
     {
         //Change this to be part of animation
+        Invoke(nameof(PlaySurfaceSound), 2f);
         Invoke(nameof(SpreadShot), 3.5f);
         Invoke(nameof(Remove), 3.5f);
     }
@@ -25,6 +27,11 @@ public class TentacleAttack : BossCommonBehavior
     public void setBulletPool(BulletPool bp)
     {
         base.bulletPool = bp;
+    }
+
+    public void PlaySurfaceSound()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(SurfaceEvent, transform.position);
     }
 
     private void SpreadShot()
