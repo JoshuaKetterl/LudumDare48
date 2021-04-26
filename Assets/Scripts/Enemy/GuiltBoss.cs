@@ -22,7 +22,6 @@ public class GuiltBoss : BossCommonBehavior
 
     private int locationsListSize;
 
-    //FROM GUYSHOOT
     [SerializeField] private Rigidbody2D firePoint;
     [SerializeField] private float reloadTime;
 
@@ -44,7 +43,7 @@ public class GuiltBoss : BossCommonBehavior
         locationsListSize = locations.Count;
 
         timer = timerDefault;
-        //FROM GUY
+
         cachedFirePointTransform = firePoint.transform;
         target = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -74,12 +73,16 @@ public class GuiltBoss : BossCommonBehavior
 
         if (bossLineOfSight.collider != null && bossLineOfSight.collider.transform.parent != null)
         {
-            Debug.DrawLine(rayPointTransform.position, bossLineOfSight.point, Color.red);
-            //lineRenderer.SetPosition(1, bossLineOfSight.point);
-            //lineRenderer.colorGradient = redColor;
+            //Debug.DrawLine(rayPointTransform.position, bossLineOfSight.point, Color.red);
+            lineRenderer.SetPosition(1, bossLineOfSight.point);
+            lineRenderer.colorGradient = redColor;
 
             if (bossLineOfSight.collider.transform.parent.CompareTag("Player"))
             {
+                //Debug.DrawLine(rayPointTransform.position, bossLineOfSight.point, Color.green);
+                lineRenderer.SetPosition(1, bossLineOfSight.point);
+                lineRenderer.colorGradient = greenColor;
+                
                 timer = timerDefault;
                 if (canShoot)
                 {
@@ -95,14 +98,8 @@ public class GuiltBoss : BossCommonBehavior
                     Teleport();
             }
         }
-        else
-        {
-            Debug.DrawLine(rayPointTransform.position, rayPointTransform.position + rayPointTransform.right * rayDistance, Color.green);
-            //lineRenderer.SetPosition(1, rayPointTransform.position + rayPointTransform.right * rayDistance);
-            //lineRenderer.colorGradient = greenColor;
-        }
 
-        //lineRenderer.SetPosition(0, rayPointTransform.position);
+        lineRenderer.SetPosition(0, rayPointTransform.position);
     }
 
     private void Teleport()
@@ -132,7 +129,7 @@ public class GuiltBoss : BossCommonBehavior
         base.PhaseTwo();
         CancelInvoke();
         Reload();
-        reloadTime = .2f;
+        reloadTime = 0.7f;
     }
 
     private void SingleShot()
