@@ -1,64 +1,82 @@
 fileFormatVersion: 2
-guid: 0f4d4e33cfbae834da55288b05e19b2c
+guid: 7accb51bdddd8084b926bdcb6c499929
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1368488825408910151
-    second: guiltBoss_spriteSheet_0
+      213: -3889684570403721446
+    second: darkEnemyTentacles_Main_sprite_sheet_0
   - first:
-      213: -7196760153185903628
-    second: guiltBoss_spriteSheet_1
+      213: 317667878281807136
+    second: darkEnemyTentacles_Main_sprite_sheet_1
   - first:
-      213: -3336695461009463958
-    second: guiltBoss_spriteSheet_2
+      213: -6964753831476796433
+    second: darkEnemyTentacles_Main_sprite_sheet_2
   - first:
-      213: 352911201459769315
-    second: guiltBoss_spriteSheet_3
+      213: 6583817601639698691
+    second: darkEnemyTentacles_Main_sprite_sheet_3
   - first:
-      213: -6769147757766491405
-    second: guiltBoss_spriteSheet_4
+      213: -4780828215864782160
+    second: darkEnemyTentacles_Main_sprite_sheet_4
   - first:
-      213: 5721976904112227990
-    second: guiltBoss_spriteSheet_5
+      213: -188016470722630686
+    second: darkEnemyTentacles_Main_sprite_sheet_5
   - first:
-      213: 8661050972326479226
-    second: guiltBoss_spriteSheet_6
+      213: -8108309425322468990
+    second: darkEnemyTentacles_Main_sprite_sheet_6
   - first:
-      213: 1352549528736566183
-    second: guiltBoss_spriteSheet_7
+      213: -3783935312797913377
+    second: darkEnemyTentacles_Main_sprite_sheet_7
   - first:
-      213: -4375953969906868823
-    second: guiltBoss_spriteSheet_8
+      213: 1794664581461919313
+    second: darkEnemyTentacles_Main_sprite_sheet_8
   - first:
-      213: 2488351816153299854
-    second: guiltBoss_spriteSheet_9
+      213: 915888612051497747
+    second: darkEnemyTentacles_Main_sprite_sheet_9
   - first:
-      213: -154418987486474998
-    second: guiltBoss_spriteSheet_10
+      213: 1121417277137985606
+    second: darkEnemyTentacles_Main_sprite_sheet_10
   - first:
-      213: -1892023728772345493
-    second: guiltBoss_spriteSheet_11
+      213: 9109371176686611000
+    second: darkEnemyTentacles_Main_sprite_sheet_11
   - first:
-      213: -6839924946853152653
-    second: guiltBoss_spriteSheet_12
+      213: -718243146693843313
+    second: darkEnemyTentacles_Main_sprite_sheet_12
   - first:
-      213: -5539734811336444936
-    second: guiltBoss_spriteSheet_13
+      213: -4600781839622623325
+    second: darkEnemyTentacles_Main_sprite_sheet_13
   - first:
-      213: -886369391219744527
-    second: guiltBoss_spriteSheet_14
+      213: -1462822528259684375
+    second: darkEnemyTentacles_Main_sprite_sheet_14
   - first:
-      213: -6395882132792382612
-    second: guiltBoss_spriteSheet_15
+      213: 1114964130057246504
+    second: darkEnemyTentacles_Main_sprite_sheet_15
   - first:
-      213: 150500228781520260
-    second: guiltBoss_spriteSheet_16
+      213: -5716413042684250477
+    second: darkEnemyTentacles_Main_sprite_sheet_16
   - first:
-      213: 7536788078070043350
-    second: guiltBoss_spriteSheet_17
+      213: -5531801902614604380
+    second: darkEnemyTentacles_Main_sprite_sheet_17
   - first:
-      213: 6284932065974366865
-    second: guiltBoss_spriteSheet_18
+      213: -6676993885005268932
+    second: darkEnemyTentacles_Main_sprite_sheet_18
+  - first:
+      213: 7620956657174631497
+    second: darkEnemyTentacles_Main_sprite_sheet_19
+  - first:
+      213: 4141128712269785749
+    second: darkEnemyTentacles_Main_sprite_sheet_20
+  - first:
+      213: 7499499797399637627
+    second: darkEnemyTentacles_Main_sprite_sheet_21
+  - first:
+      213: -2787566728721221864
+    second: darkEnemyTentacles_Main_sprite_sheet_22
+  - first:
+      213: 4386979571002320598
+    second: darkEnemyTentacles_Main_sprite_sheet_23
+  - first:
+      213: -5388669824413457684
+    second: darkEnemyTentacles_Main_sprite_sheet_24
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -90,7 +108,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
+    aniso: 1
     mipBias: -100
     wrapU: 1
     wrapV: 1
@@ -172,13 +190,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_0
+      name: darkEnemyTentacles_Main_sprite_sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 1280
-        width: 256
-        height: 256
+        y: 1152
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,20 +204,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bc0962f9a6220de0800000000000000
-      internalID: -1368488825408910151
+      spriteID: a1fa4ccdd70150ac0800000000000000
+      internalID: -3889684570403721446
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_1
+      name: darkEnemyTentacles_Main_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0250a819045986400800000000000000
+      internalID: 317667878281807136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkEnemyTentacles_Main_sprite_sheet_2
       rect:
         serializedVersion: 2
         x: 256
-        y: 1280
-        width: 256
-        height: 256
+        y: 1152
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,20 +246,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fb1baf45c8ff1c90800000000000000
-      internalID: -7196760153185903628
+      spriteID: fe3e8c68a49385f90800000000000000
+      internalID: -6964753831476796433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_2
+      name: darkEnemyTentacles_Main_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301d2b3e93b6e5b50800000000000000
+      internalID: 6583817601639698691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkEnemyTentacles_Main_sprite_sheet_4
       rect:
         serializedVersion: 2
         x: 512
-        y: 1280
-        width: 256
-        height: 256
+        y: 1152
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,20 +288,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a656fd2282da1b1d0800000000000000
-      internalID: -3336695461009463958
+      spriteID: 0b2173d411617adb0800000000000000
+      internalID: -4780828215864782160
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_3
+      name: darkEnemyTentacles_Main_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eba7aa1408046df0800000000000000
+      internalID: -188016470722630686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkEnemyTentacles_Main_sprite_sheet_6
       rect:
         serializedVersion: 2
         x: 768
-        y: 1280
-        width: 256
-        height: 256
+        y: 1152
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,20 +330,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ef04403edac5e400800000000000000
-      internalID: 352911201459769315
+      spriteID: 289d3be898f797f80800000000000000
+      internalID: -8108309425322468990
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_4
+      name: darkEnemyTentacles_Main_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1152
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdeaf9391e2cc7bc0800000000000000
+      internalID: -3783935312797913377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkEnemyTentacles_Main_sprite_sheet_8
       rect:
         serializedVersion: 2
         x: 1024
-        y: 1280
-        width: 256
-        height: 256
+        y: 1152
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,20 +372,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f242329af72f02a0800000000000000
-      internalID: -6769147757766491405
+      spriteID: 1564305adede7e810800000000000000
+      internalID: 1794664581461919313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_5
+      name: darkEnemyTentacles_Main_sprite_sheet_9
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 1280
-        width: 256
-        height: 256
+        x: 1152
+        y: 1152
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,20 +393,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 696499e8dab886f40800000000000000
-      internalID: 5721976904112227990
+      spriteID: 313b72f07d3e5bc00800000000000000
+      internalID: 915888612051497747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_6
+      name: darkEnemyTentacles_Main_sprite_sheet_10
       rect:
         serializedVersion: 2
         x: 0
         y: 1024
-        width: 256
-        height: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,20 +414,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a75421b98fb323870800000000000000
-      internalID: 8661050972326479226
+      spriteID: 640abc07213109f00800000000000000
+      internalID: 1121417277137985606
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_7
+      name: darkEnemyTentacles_Main_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a669952dcfa6e70800000000000000
+      internalID: 9109371176686611000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkEnemyTentacles_Main_sprite_sheet_12
       rect:
         serializedVersion: 2
         x: 256
         y: 1024
-        width: 256
-        height: 256
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -333,20 +456,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ab077951a835c210800000000000000
-      internalID: 1352549528736566183
+      spriteID: f8664fad9a94806f0800000000000000
+      internalID: -718243146693843313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_8
+      name: darkEnemyTentacles_Main_sprite_sheet_13
       rect:
         serializedVersion: 2
-        x: 0
-        y: 768
-        width: 256
-        height: 256
+        x: 384
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -354,41 +477,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ad9d369c0d7543c0800000000000000
-      internalID: -4375953969906868823
+      spriteID: 3afa938fa4db620c0800000000000000
+      internalID: -4600781839622623325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_9
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 768
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8bf30efac6688220800000000000000
-      internalID: 2488351816153299854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guiltBoss_spriteSheet_10
+      name: darkEnemyTentacles_Main_sprite_sheet_14
       rect:
         serializedVersion: 2
         x: 512
-        y: 768
-        width: 256
-        height: 256
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,20 +498,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0d0b40cfb46bddf0800000000000000
-      internalID: -154418987486474998
+      spriteID: 9e784a139a203bbe0800000000000000
+      internalID: -1462822528259684375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_11
+      name: darkEnemyTentacles_Main_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8275d5d08f5297f00800000000000000
+      internalID: 1114964130057246504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkEnemyTentacles_Main_sprite_sheet_16
       rect:
         serializedVersion: 2
         x: 768
-        y: 768
-        width: 256
-        height: 256
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -417,20 +540,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b611aeb617e2eb5e0800000000000000
-      internalID: -1892023728772345493
+      spriteID: 3963561ef983ba0b0800000000000000
+      internalID: -5716413042684250477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_12
+      name: darkEnemyTentacles_Main_sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1024
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a593d27a771b33b0800000000000000
+      internalID: -5531801902614604380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkEnemyTentacles_Main_sprite_sheet_18
       rect:
         serializedVersion: 2
         x: 1024
-        y: 768
-        width: 256
-        height: 256
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -438,20 +582,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3783c741084b311a0800000000000000
-      internalID: -6839924946853152653
+      spriteID: c383ec4107d8653a0800000000000000
+      internalID: -6676993885005268932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_13
+      name: darkEnemyTentacles_Main_sprite_sheet_19
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 768
-        width: 256
-        height: 256
+        x: 1152
+        y: 1024
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,20 +603,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f3fc643a88ee13b0800000000000000
-      internalID: -5539734811336444936
+      spriteID: 944da8fb3b313c960800000000000000
+      internalID: 7620956657174631497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_14
+      name: darkEnemyTentacles_Main_sprite_sheet_20
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
-        width: 256
-        height: 256
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -480,20 +624,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f061902cbbf2b3f0800000000000000
-      internalID: -886369391219744527
+      spriteID: 59ae2088f9e387930800000000000000
+      internalID: 4141128712269785749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_15
+      name: darkEnemyTentacles_Main_sprite_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e8e19e453931860800000000000000
+      internalID: 7499499797399637627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkEnemyTentacles_Main_sprite_sheet_22
       rect:
         serializedVersion: 2
         x: 256
-        y: 512
-        width: 256
-        height: 256
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -501,20 +666,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6b64a946134d37a0800000000000000
-      internalID: -6395882132792382612
+      spriteID: 817bfd254d29059d0800000000000000
+      internalID: -2787566728721221864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: guiltBoss_spriteSheet_16
+      name: darkEnemyTentacles_Main_sprite_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d62d763daea1ec30800000000000000
+      internalID: 4386979571002320598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: darkEnemyTentacles_Main_sprite_sheet_24
       rect:
         serializedVersion: 2
         x: 512
-        y: 512
-        width: 256
-        height: 256
+        y: 896
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -522,50 +708,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4853323292fa61200800000000000000
-      internalID: 150500228781520260
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guiltBoss_spriteSheet_17
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d293cc43dc089860800000000000000
-      internalID: 7536788078070043350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: guiltBoss_spriteSheet_18
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1923ddd3a60983750800000000000000
-      internalID: 6284932065974366865
+      spriteID: ce228f758599735b0800000000000000
+      internalID: -5388669824413457684
       vertices: []
       indices: 
       edges: []
@@ -573,7 +717,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4273f8ee9350b99439cc3773b319371a
+    spriteID: f131cb9c6b449294ca3d75330a1143d2
     internalID: 0
     vertices: []
     indices: 
