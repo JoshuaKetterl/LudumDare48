@@ -45,22 +45,22 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //can also add some effect when bullets collide with smth
-        //like an explosion for example
-        //print("Bullet Collision Detected");
-
         if (!hostile && collision.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponentInParent<BossCommonBehavior>().DealDamage(damage);
             Remove();
         }
-        else if (!hostile && collision.CompareTag("levelCollider"))
+        else if (!hostile && (collision.CompareTag("levelCollider") || collision.CompareTag("cathedralLevelCollider")))
         {
             Remove();
         }
         else if (hostile && collision.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerManager>().DealDamage();
+        }
+        else if (hostile && collision.CompareTag("cathedralLevelCollider"))
+        {
+            Remove();
         }
     }
 

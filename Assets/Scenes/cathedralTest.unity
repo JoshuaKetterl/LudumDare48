@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 90308492}
   m_Layer: 0
   m_Name: wallColliderCenter (1)
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 133383640}
   m_Layer: 0
   m_Name: stainedGlass_Main_sprite
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 159396199}
   m_Layer: 0
   m_Name: wallCollider_left_wall
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1009,7 +1009,7 @@ GameObject:
   - component: {fileID: 176763428}
   m_Layer: 0
   m_Name: pewCollider (2)
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1347,7 +1347,7 @@ GameObject:
   - component: {fileID: 223399825}
   m_Layer: 0
   m_Name: pewCollider (5)
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2208,7 +2208,7 @@ GameObject:
   - component: {fileID: 398641135}
   m_Layer: 0
   m_Name: wallCollider_left_wall (1)
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2600,7 +2600,7 @@ GameObject:
   - component: {fileID: 519615591}
   m_Layer: 0
   m_Name: furniture
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2915,7 +2915,7 @@ GameObject:
   - component: {fileID: 637052151}
   m_Layer: 0
   m_Name: alterCollider
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3247,7 +3247,7 @@ GameObject:
   - component: {fileID: 700069736}
   m_Layer: 0
   m_Name: wallCollider_centerLeft
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3438,7 +3438,7 @@ GameObject:
   - component: {fileID: 748082321}
   m_Layer: 0
   m_Name: wallCollider_centerRight
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3680,7 +3680,7 @@ GameObject:
   - component: {fileID: 769567674}
   m_Layer: 0
   m_Name: pewCollider (1)
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3960,7 +3960,7 @@ GameObject:
   - component: {fileID: 804393885}
   m_Layer: 0
   m_Name: stainedGlass_spriteLights
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4048,7 +4048,7 @@ GameObject:
   - component: {fileID: 825493418}
   m_Layer: 0
   m_Name: cathedralLevel
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4779,7 +4779,7 @@ GameObject:
   - component: {fileID: 1077388724}
   m_Layer: 0
   m_Name: pewCollider
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5423,7 +5423,7 @@ GameObject:
   - component: {fileID: 1245025868}
   m_Layer: 0
   m_Name: wallColliderCenter
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5717,7 +5717,7 @@ GameObject:
   - component: {fileID: 1391836580}
   m_Layer: 0
   m_Name: pewCollider (4)
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5941,7 +5941,7 @@ GameObject:
   - component: {fileID: 1460306428}
   m_Layer: 0
   m_Name: wallCollider_bottom
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6554,7 +6554,7 @@ GameObject:
   - component: {fileID: 1736529231}
   m_Layer: 0
   m_Name: wallCollider_top
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6871,7 +6871,7 @@ GameObject:
   - component: {fileID: 1811156197}
   m_Layer: 0
   m_Name: pewCollider (3)
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7043,7 +7043,7 @@ GameObject:
   - component: {fileID: 1835689871}
   m_Layer: 0
   m_Name: cathedral_furniture
-  m_TagString: levelCollider
+  m_TagString: cathedralLevelCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
