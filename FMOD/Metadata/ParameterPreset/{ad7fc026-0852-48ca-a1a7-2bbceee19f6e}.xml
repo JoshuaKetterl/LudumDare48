@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{ad7fc026-0852-48ca-a1a7-2bbceee19f6e}">
+		<property name="name">
+			<value>toCathedral</value>
+		</property>
+		<relationship name="folder">
+			<destination>{65053029-af0a-4346-944d-5efc6b47478a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{31a92af8-dc74-49d0-9e3b-39e2fdf16424}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{31a92af8-dc74-49d0-9e3b-39e2fdf16424}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
