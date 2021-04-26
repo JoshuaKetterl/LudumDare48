@@ -18,8 +18,8 @@ public class TentacleAttack : BossCommonBehavior
     private void OnEnable()
     {
         //Change this to be part of animation
-        Invoke(nameof(SpreadShot), 3f);
-        Invoke(nameof(Remove), 4f);
+        Invoke(nameof(SpreadShot), 3.5f);
+        Invoke(nameof(Remove), 3.5f);
     }
 
     public void setBulletPool(BulletPool bp)
