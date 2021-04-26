@@ -48,8 +48,6 @@ MonoBehaviour:
   bulletPool: {fileID: 0}
   bossManager: {fileID: 0}
   firePoint: {fileID: 1670777783608124616}
-  rb2D: {fileID: 0}
-  fearBoss: {fileID: 0}
 --- !u!1 &1670777783608124618
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,7 +73,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670777783608124618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.003, y: 0.074, z: 0}
+  m_LocalPosition: {x: 0.034, y: 0.074, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 756484546419094704}
@@ -212,12 +210,12 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670777784452546174}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12641075, y: 0.07110605}
+  m_Offset: {x: 0, y: 0.07110605}
   m_Size: {x: 0.29241592, y: 0.67289823}
   m_Direction: 0
