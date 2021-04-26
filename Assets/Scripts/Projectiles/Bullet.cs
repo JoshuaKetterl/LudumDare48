@@ -51,7 +51,14 @@ public class Bullet : MonoBehaviour
 
         if (!hostile && collision.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<BossManager>().DealDamage(damage);
+            //DEBUG
+            if (collision.gameObject.GetComponentInParent<BossCommonBehavior>() == null)
+                print("Target is NULL");
+            collision.gameObject.GetComponentInParent<BossCommonBehavior>().DealDamage(damage);
+            Remove();
+        }
+        else if (!hostile && collision.CompareTag("levelCollider"))
+        {
             Remove();
         }
         else if (hostile && collision.CompareTag("Player"))

@@ -5,20 +5,18 @@ using UnityEngine;
 public class TentacleAttack : BossCommonBehavior
 {
     [SerializeField] private Rigidbody2D firePoint;
-    [SerializeField] public Rigidbody2D rb2D;
-    [SerializeField] public GameObject FearBoss;
 
     private Transform cachedFirePointTransform;
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
         cachedFirePointTransform = firePoint.transform;
     }
 
     private void OnEnable()
     {
         //Change this to be part of animation
+        Invoke(nameof(SpreadShot), 3f);
         Invoke(nameof(Remove), 4f);
     }
 
