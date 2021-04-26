@@ -13,9 +13,11 @@ public class GuiltBoss : BossCommonBehavior
 
     [SerializeField] private List<Transform> locations;
 
-    [SerializeField] private float timerDefault = 3f;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
-    private float timer = 3f;
+    [SerializeField] private float timerDefault = 2.5f;
+
+    private float timer;
 
     Collider2D[] overlappingColliders = new Collider2D[1];
     ContactFilter2D contactFilter2D = new ContactFilter2D().NoFilter();
@@ -47,7 +49,7 @@ public class GuiltBoss : BossCommonBehavior
         cachedFirePointTransform = firePoint.transform;
         target = GameObject.FindGameObjectWithTag("Player").transform;
 
-        Invoke(nameof(Reload), reloadTime * 2);
+        Invoke(nameof(Reload), reloadTime);
     }
 
     public void FixedUpdate()
@@ -109,11 +111,24 @@ public class GuiltBoss : BossCommonBehavior
         int numberColliders = locations[locationIndex].GetComponent<Collider2D>().OverlapCollider(contactFilter2D, overlappingColliders);
 
         if (numberColliders == 0)
+        {
             cachedBossTransform.position = locations[locationIndex].position;
+        }
         else if (numberColliders != 0 && (locationIndex + 1) >= locationsListSize)
-            cachedBossTransform.position = locations[locationIndex - 1].position;
+        {
+            locationIndex--;
+            cachedBossTransform.position = locations[locationIndex].position;
+        }
         else if (numberColliders != 0 && (locationIndex - 1) <= -1)
-            cachedBossTransform.position = locations[locationIndex + 1].position;
+        {
+            locationIndex++;
+            cachedBossTransform.position = locations[locationIndex].position;
+        }
+
+        if (locationIndex == 1 || locationIndex == 3)
+            spriteRenderer.flipX = true;
+        else
+            spriteRenderer.flipX = false;
 
         timer = timerDefault;
     }
@@ -121,7 +136,8 @@ public class GuiltBoss : BossCommonBehavior
     public override void PhaseOne()
     {
         base.PhaseOne();
-        reloadTime = 1.5f;
+        reloadTime = 0.8f;
+        timerDefault = 2.5f;
     }
 
     public override void PhaseTwo()
@@ -129,7 +145,8 @@ public class GuiltBoss : BossCommonBehavior
         base.PhaseTwo();
         CancelInvoke();
         Reload();
-        reloadTime = 0.7f;
+        reloadTime = 0.68f;
+        timerDefault = 1.5f;
     }
 
     private void SingleShot()
@@ -137,7 +154,7 @@ public class GuiltBoss : BossCommonBehavior
         float angle = (Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg) - 90f;
 
         cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle);
-        base.Shoot(cachedFirePointTransform, 1.2f, 4f);
+        base.Shoot(cachedFirePointTransform, 3f, 4f);
     }
 
     private void SpreadShot()
@@ -147,8 +164,14 @@ public class GuiltBoss : BossCommonBehavior
         cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle - 30f);
         base.Shoot(cachedFirePointTransform, 4f, 4f);
 
+        cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle - 15f);
+        base.Shoot(cachedFirePointTransform, 4f, 4f);
+
         cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle);
-        base.Shoot(cachedFirePointTransform, 5f, 4f);
+        base.Shoot(cachedFirePointTransform, 4f, 4f);
+
+        cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle + 15f);
+        base.Shoot(cachedFirePointTransform, 4f, 4f);
 
         cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle + 30f);
         base.Shoot(cachedFirePointTransform, 4f, 4f);
