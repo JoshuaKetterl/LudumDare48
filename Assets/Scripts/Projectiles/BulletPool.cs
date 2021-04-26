@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BulletPool : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject pooledBullet;
+    [SerializeField] private GameObject pooledBullet;
+
+    [FMODUnity.EventRef] public string ShootEvent = "";
 
     private readonly int maxBullets = 128;
     private bool notEnoughBulletsInPool = true;
@@ -16,6 +17,11 @@ public class BulletPool : MonoBehaviour
     void Start()
     {
         bullets = new List<GameObject>();
+    }
+
+    public void PlaySound(Vector2 sourcePosition)
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(ShootEvent, transform.position);
     }
 
     public GameObject GetBullet()

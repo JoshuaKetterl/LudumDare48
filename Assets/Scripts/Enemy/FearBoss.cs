@@ -8,7 +8,10 @@ public class FearBoss : BossCommonBehavior
     [SerializeField] private GameObject pooledTentacle;
     [SerializeField] private List<Transform> tpLocations;
     [SerializeField] private List<Transform> tentacleLocations;
-    [SerializeField] private Animator animator;
+    
+    private Animator animator;
+
+    [FMODUnity.EventRef] public string RoarEvent = "";
 
     private float reloadTime = 3f;
     private readonly float screamReload = 6f;
@@ -75,6 +78,7 @@ public class FearBoss : BossCommonBehavior
                     SpawnTentacle(tentacleLocations[i].position);
                 }
                 Invoke(nameof(ScreamEnd), screamDuration);
+                FMODUnity.RuntimeManager.PlayOneShot(RoarEvent, transform.position);
                 inScream = true;
                 print("BOSS IS SCREM");
             }
@@ -137,6 +141,12 @@ public class FearBoss : BossCommonBehavior
             return t;
         }
         return null;
+    }
+
+    public override void DealDamage(float damage)
+    {
+        animator.SetTrigger("damage");
+        base.DealDamage(damage);
     }
 
     private void Reload()

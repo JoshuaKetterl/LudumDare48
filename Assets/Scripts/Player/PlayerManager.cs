@@ -7,14 +7,19 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private int maxHP = 3;
     [SerializeField] private float invWindow = 1f;
 
+    [FMODUnity.EventRef] public string HealEvent = "";
+    [FMODUnity.EventRef] public string TakeDamageEvent = "";
+
     private int currentHP;
     private bool vulnerable;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHP = maxHP;
         vulnerable = true;
+        animator = gameObject.GetComponentInChildren<Animator>();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -47,6 +52,8 @@ public class PlayerManager : MonoBehaviour
         if (vulnerable)
         {
             currentHP--;
+            FMODUnity.RuntimeManager.PlayOneShot(TakeDamageEvent, transform.position);
+            animator.SetTrigger("thePillDamage");
             if (currentHP <= 0)
             {
                 vulnerable = false;
@@ -69,6 +76,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Heal()
     {
+        FMODUnity.RuntimeManager.PlayOneShot(HealEvent, transform.position);
         if (currentHP < maxHP)
             currentHP++;
 

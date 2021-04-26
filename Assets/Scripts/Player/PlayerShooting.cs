@@ -14,6 +14,7 @@ public class PlayerShooting : MonoBehaviour
 
     private Vector2 mousePos;
     private Vector2 lookDirection;
+    private Animator animator;
 
     private Transform cachedFirePointTransform;
 
@@ -24,6 +25,7 @@ public class PlayerShooting : MonoBehaviour
     private void Start()
     {
         cachedFirePointTransform = firePoint.transform;
+        animator = gameObject.GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -76,6 +78,9 @@ public class PlayerShooting : MonoBehaviour
             b.SetSpeed(bulletSpeed);
             b.SetDamage(1);
             b.SetHostility(false);
+
+        bulletPool.PlaySound(transform.position);
+        animator.SetTrigger("thePillFire");
 
         //Activate bullet object (must happen last)
         bullet.SetActive(true);
