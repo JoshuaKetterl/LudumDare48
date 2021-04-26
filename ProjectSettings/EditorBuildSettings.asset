@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameplay_Test.unity
     guid: 042e9e1a0c1866e459b138fa85da3b2b
   - enabled: 1
-    path: Assets/Scenes/michael_testScene.unity
+    path: Assets/Scenes/FearOfDarkBoss.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/test_scene_audio.unity

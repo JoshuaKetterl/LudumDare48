@@ -5,7 +5,6 @@ using UnityEngine;
 public class FearBoss : BossCommonBehavior
 {
     [SerializeField] private Rigidbody2D firePoint;
-    [SerializeField] private Rigidbody2D mainBody;
     [SerializeField] private GameObject pooledTentacle;
     [SerializeField] private float reloadTime = 3f;
     [SerializeField] private float moveSpeed = 1f;
@@ -36,18 +35,22 @@ public class FearBoss : BossCommonBehavior
         if (canSpawn)
         {
             if (base.bossManager.phaseTwo)
-                TargetedTentacle();
+                SpawnTentacle(target.position);
             else
-                TargetedTentacle();
+                SpawnTentacle(target.position);
             canSpawn = false;
             Invoke(nameof(Reload), reloadTime);
         }
     }
 
-    //DEBUG
-    private void TargetedTentacle()
+    public override void PhaseOne()
     {
-        SpawnTentacle(target.position);
+        base.PhaseOne();
+    }
+
+    public override void PhaseTwo()
+    {
+        base.PhaseTwo();
     }
 
     public void SpawnTentacle(Vector2 target)
