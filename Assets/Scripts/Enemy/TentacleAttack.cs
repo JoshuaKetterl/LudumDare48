@@ -19,7 +19,7 @@ public class TentacleAttack : BossCommonBehavior
     private void OnEnable()
     {
         //Change this to be part of animation
-        Invoke(nameof(PlaySurfaceSound), 0.3f);
+        Invoke(nameof(PlaySurfaceSound), 0.05f);
         Invoke(nameof(SpreadShot), 3.5f);
         Invoke(nameof(Remove), 3.5f);
     }
