@@ -8,8 +8,8 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private Rigidbody2D firePoint;
     [SerializeField] private Camera cam;
     [SerializeField] private BulletPool bulletPool;
-    [SerializeField] private float reloadTime = 0.25f;
-    [SerializeField] private float bulletSpeed = 4f;
+    [SerializeField] private float reloadTime = 0.4f;
+    [SerializeField] private float bulletSpeed = 3f;
     [SerializeField] private float slowMoDuration = 3f;
 
     private Vector2 mousePos;

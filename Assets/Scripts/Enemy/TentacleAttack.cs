@@ -8,7 +8,7 @@ public class TentacleAttack : BossCommonBehavior
 
     private Transform cachedFirePointTransform;
     private float ttl = 3f;
-    private float bulletSpeed = 3f;
+    private float bulletSpeed = 2f;
 
     private void Start()
     {
