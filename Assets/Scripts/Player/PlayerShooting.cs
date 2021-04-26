@@ -79,7 +79,6 @@ public class PlayerShooting : MonoBehaviour
 
         //Activate bullet object (must happen last)
         bullet.SetActive(true);
-        bulletPool.playSound(transform.position);
 
         //Instantiate(bulletPrefab, cachedFirePointTransform.position, cachedFirePointTransform.rotation);
         //Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();

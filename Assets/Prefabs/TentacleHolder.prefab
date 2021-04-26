@@ -48,7 +48,6 @@ MonoBehaviour:
   bulletPool: {fileID: 0}
   bossManager: {fileID: 0}
   firePoint: {fileID: 1670777783608124616}
-  SurfaceEvent: event:/tentacleSurface
 --- !u!1 &1670777783608124618
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,9 +7,6 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private int maxHP = 3;
     [SerializeField] private float invWindow = 1f;
 
-    [FMODUnity.EventRef] public string TakeDamageEvent = "";
-    [FMODUnity.EventRef] public string HealthPickupEvent = "";
-
     private int currentHP;
     private bool vulnerable;
 
@@ -33,7 +30,6 @@ public class PlayerManager : MonoBehaviour
         if (collision.CompareTag("Pickup"))
         {
             collision.gameObject.SetActive(false);
-            FMODUnity.RuntimeManager.PlayOneShot(HealthPickupEvent, transform.position);
             Heal();
         }
     }
@@ -50,7 +46,6 @@ public class PlayerManager : MonoBehaviour
     {
         if (vulnerable)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(TakeDamageEvent, transform.position);
             currentHP--;
             if (currentHP <= 0)
             {
