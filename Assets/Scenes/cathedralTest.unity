@@ -5828,6 +5828,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: guiltyBossHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 479797709621644378, guid: 35de2bcdcfa08de42acc62ddc7ce7c33, type: 3}
+      propertyPath: m_Name
+      value: guitlyBoss
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35de2bcdcfa08de42acc62ddc7ce7c33, type: 3}
 --- !u!1001 &8999229178588626704
