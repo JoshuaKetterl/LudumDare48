@@ -64,6 +64,8 @@ public class TentacleAttack : BossCommonBehavior
 
         cachedFirePointTransform.eulerAngles = new Vector3(0, 0, 330f);
         base.Shoot(cachedFirePointTransform, bulletSpeed, ttl);
+
+        bulletPool.playSound(cachedFirePointTransform.position);
     }
 
     private void Remove()

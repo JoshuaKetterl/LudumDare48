@@ -9,6 +9,9 @@ public class FearBoss : BossCommonBehavior
     [SerializeField] private List<Transform> tpLocations;
     [SerializeField] private List<Transform> tentacleLocations;
 
+    [FMODUnity.EventRef]
+    public string RoarEvent = "";
+
     private float reloadTime = 3f;
     private readonly float screamReload = 6f;
     private readonly float screamDuration = 4f;
@@ -73,6 +76,7 @@ public class FearBoss : BossCommonBehavior
                 }
                 Invoke(nameof(ScreamEnd), screamDuration);
                 inScream = true;
+                FMODUnity.RuntimeManager.PlayOneShot(RoarEvent, transform.position);
                 print("BOSS IS SCREM");
             }
             else

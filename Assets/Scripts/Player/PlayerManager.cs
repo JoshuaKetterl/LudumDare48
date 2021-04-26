@@ -7,6 +7,9 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private int maxHP = 3;
     [SerializeField] private float invWindow = 1f;
 
+    [FMODUnity.EventRef]
+    public string TakeDamageEvent = "";
+
     private int currentHP;
     private bool vulnerable;
 
@@ -46,6 +49,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (vulnerable)
         {
+            FMODUnity.RuntimeManager.PlayOneShot(TakeDamageEvent, transform.position);
             currentHP--;
             if (currentHP <= 0)
             {

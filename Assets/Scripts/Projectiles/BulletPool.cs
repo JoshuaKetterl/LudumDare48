@@ -7,6 +7,9 @@ public class BulletPool : MonoBehaviour
     [SerializeField]
     private GameObject pooledBullet;
 
+    [FMODUnity.EventRef]
+    public string ShootEvent = "";
+
     private readonly int maxBullets = 128;
     private bool notEnoughBulletsInPool = true;
 
@@ -16,6 +19,11 @@ public class BulletPool : MonoBehaviour
     void Start()
     {
         bullets = new List<GameObject>();
+    }
+
+    public void playSound(Vector2 sourceLocation)
+    {
+        FMODUnity.RuntimeManager.PlayOneShot(ShootEvent, sourceLocation);
     }
 
     public GameObject GetBullet()
