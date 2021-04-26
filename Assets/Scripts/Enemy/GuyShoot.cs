@@ -19,10 +19,8 @@ public class GuyShoot : BossCommonBehavior
     private bool canShoot = false;
     private float moveSpeed;
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
-
         cachedFirePointTransform = firePoint.transform;
         target = GameObject.FindGameObjectWithTag("Player").transform;
 
@@ -56,7 +54,7 @@ public class GuyShoot : BossCommonBehavior
 
         if (canShoot)
         {
-            if (base.InPhaseTwo())
+            if (base.bossManager.phaseTwo)
                 SpreadShot();
             else
                 SingleShot();

@@ -5,12 +5,13 @@ using UnityEngine;
 public class BossCommonBehavior : MonoBehaviour
 {
     [SerializeField] public BulletPool bulletPool;
+    [SerializeField] public BossManager bossManager;
 
-    private bool phaseTwo;
-
-    protected virtual void Start()
+    public virtual void DealDamage(float damage)
     {
-        PhaseOne();
+        //Default behavior is to damage boss health
+        //Override for enemies with health pools independent from boss
+        bossManager.DealDamage(damage);
     }
 
     protected void Shoot(Transform origin, float moveSpeed, float ttl)
@@ -33,13 +34,11 @@ public class BossCommonBehavior : MonoBehaviour
 
     public virtual void PhaseOne()
     {
-        phaseTwo = false;
         print("----------Phase One Initiated!-----------");
     }
 
     public virtual void PhaseTwo()
     {
-        phaseTwo = true;
         print("----------Phase Two Initiated!-----------");
     }
 
@@ -48,10 +47,5 @@ public class BossCommonBehavior : MonoBehaviour
         //DEBUG
         print("-------------Boss Destroyed!--------------");
         gameObject.SetActive(false);
-    }
-
-    public bool InPhaseTwo()
-    {
-        return phaseTwo;
     }
 }

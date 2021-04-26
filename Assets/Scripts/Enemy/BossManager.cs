@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class BossManager : MonoBehaviour
 {
-    public static BossManager bossManagerInstance;
-    public BossCommonBehavior bossInstance;
+    //Handles the Primary Boss Instance and tracks the HP amount which triggers Phase transistions.
+    // Must be configured as serialized field with GameManager for handling phase change FX
 
-    [SerializeField] private float maxHP = 50;
+    [SerializeField] public BossCommonBehavior primaryBossInstance;
+    [SerializeField] public float maxHP;
+
+    public bool phaseTwo = false;
+
+    private BossCommonBehavior bossInstance;
     private float currentHP;
     private float phaseTwoHP;
 
@@ -19,6 +24,8 @@ public class BossManager : MonoBehaviour
         vulnerable = true;
         currentHP = maxHP;
         phaseTwoHP = maxHP / 2;
+
+        primaryBossInstance.PhaseOne();
     }
 
     public float GetHP()
@@ -32,14 +39,15 @@ public class BossManager : MonoBehaviour
         {
             currentHP -= dmg;
 
-            if (!bossInstance.InPhaseTwo() && currentHP <= phaseTwoHP)
+            if (!phaseTwo && currentHP <= phaseTwoHP)
             {
-                bossInstance.PhaseTwo();
+                phaseTwo = true;
+                primaryBossInstance.PhaseTwo();
             }
             else if (currentHP <= 0)
             {
                 vulnerable = false;
-                bossInstance.OnKill();
+                primaryBossInstance.OnKill();
             }
             else
             {

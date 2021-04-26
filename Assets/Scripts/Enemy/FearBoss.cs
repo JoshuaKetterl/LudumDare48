@@ -6,10 +6,10 @@ public class FearBoss : BossCommonBehavior
 {
     [SerializeField] private Rigidbody2D firePoint;
     [SerializeField] private Rigidbody2D mainBody;
+    [SerializeField] private GameObject pooledTentacle;
     [SerializeField] private float reloadTime = 3f;
     [SerializeField] private float moveSpeed = 1f;
 
-    [SerializeField] private GameObject pooledTentacle;
     private List<TentacleAttack> tentacles;
     private Vector2 targetPos;
     private Vector2 lookDirection;
@@ -17,13 +17,12 @@ public class FearBoss : BossCommonBehavior
     private Transform cachedFirePointTransform;
     private Transform target;
 
-    private bool canShoot = false;
+    private bool canSpawn = false;
     private bool notEnoughtentaclesInPool = true;
 
     // Start is called before the first frame update
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
         tentacles = new List<TentacleAttack>();
         cachedFirePointTransform = firePoint.transform;
         target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -34,13 +33,13 @@ public class FearBoss : BossCommonBehavior
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (canShoot)
+        if (canSpawn)
         {
-            if (base.InPhaseTwo())
+            if (base.bossManager.phaseTwo)
                 TargetedTentacle();
             else
                 TargetedTentacle();
-            canShoot = false;
+            canSpawn = false;
             Invoke(nameof(Reload), reloadTime);
         }
     }
@@ -48,7 +47,7 @@ public class FearBoss : BossCommonBehavior
     //DEBUG
     private void TargetedTentacle()
     {
-        SpawnTentacle(target.position + new Vector3(0f, 0f, 0f));
+        SpawnTentacle(target.position);
     }
 
     public void SpawnTentacle(Vector2 target)
@@ -76,8 +75,9 @@ public class FearBoss : BossCommonBehavior
             TentacleAttack t = Instantiate(pooledTentacle).GetComponent<TentacleAttack>();
             t.gameObject.SetActive(false);
 
-            //bullet pool must be passed because it cannot be set in prefab
+            //bullet pool and manager must be passed because it cannot be set in prefab
             t.setBulletPool(bulletPool);
+            t.bossManager = base.bossManager;
             tentacles.Add(t);
             return t;
         }
@@ -86,6 +86,6 @@ public class FearBoss : BossCommonBehavior
 
     private void Reload()
     {
-        canShoot = true;
+        canSpawn = true;
     }
 }
