@@ -13,7 +13,6 @@ public class BossManager : MonoBehaviour
     public bool phaseTwo = false;
     public bool bossBeaten = false;
 
-    private BossCommonBehavior bossInstance;
     private float currentHP;
     private float phaseTwoHP;
 

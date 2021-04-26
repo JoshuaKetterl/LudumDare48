@@ -6,8 +6,11 @@ public class BulletPool : MonoBehaviour
 {
     [SerializeField]
     private GameObject pooledBullet;
+
+    private readonly int maxBullets = 128;
     private bool notEnoughBulletsInPool = true;
 
+    private int bulletCount = 0;
     private List<GameObject> bullets;
 
     void Start()
@@ -33,6 +36,8 @@ public class BulletPool : MonoBehaviour
             GameObject b = Instantiate(pooledBullet);
             b.SetActive(false);
             bullets.Add(b);
+            if (++bulletCount > maxBullets)
+                notEnoughBulletsInPool = false;
             return b;
         }
         return null;

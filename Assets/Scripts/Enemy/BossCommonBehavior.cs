@@ -42,7 +42,7 @@ public class BossCommonBehavior : MonoBehaviour
         print("----------Phase Two Initiated!-----------");
     }
 
-    public void OnKill()
+    public virtual void OnKill()
     {
         //DEBUG
         print("-------------Boss Destroyed!--------------");

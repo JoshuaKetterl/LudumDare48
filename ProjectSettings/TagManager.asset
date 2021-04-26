@@ -9,6 +9,7 @@ TagManager:
   - SlowDown
   - EnemyBullet
   - levelCollider
+  - tp
   layers:
   - Default
   - TransparentFX

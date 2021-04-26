@@ -6,8 +6,14 @@ public class FearBoss : BossCommonBehavior
 {
     [SerializeField] private Rigidbody2D firePoint;
     [SerializeField] private GameObject pooledTentacle;
-    [SerializeField] private float reloadTime = 3f;
-    [SerializeField] private float moveSpeed = 1f;
+    [SerializeField] private List<Transform> tpLocations;
+    [SerializeField] private List<Transform> tentacleLocations;
+
+    private float reloadTime = 3f;
+    private readonly float screamReload = 6f;
+    private readonly float screamDuration = 4f;
+    private readonly float screamForce = 8f;
+    private readonly bool notEnoughTentaclesInPool = true;
 
     private List<TentacleAttack> tentacles;
     private Vector2 targetPos;
@@ -15,42 +21,85 @@ public class FearBoss : BossCommonBehavior
 
     private Transform cachedFirePointTransform;
     private Transform target;
+    private Rigidbody2D targetRB;
 
+    private int tpLocationsSize;
+    private int tentacleLocationsSize;
     private bool canSpawn = false;
-    private bool notEnoughtentaclesInPool = true;
+    private bool screamAttackCD = false;
+    private bool inScream = false;
+
 
     // Start is called before the first frame update
     private void Start()
     {
         tentacles = new List<TentacleAttack>();
         cachedFirePointTransform = firePoint.transform;
-        target = GameObject.FindGameObjectWithTag("Player").transform;
 
-        Invoke(nameof(Reload), 3f);
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+        targetRB = target.gameObject.GetComponent<Rigidbody2D>();
+
+        tentacleLocationsSize = tentacleLocations.Count;
+        tpLocationsSize = tpLocations.Count;
+
+        Invoke(nameof(Reload), reloadTime*2);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (canSpawn)
+        // scream attack always false in phase one
+        if (!screamAttackCD)
         {
-            if (base.bossManager.phaseTwo)
+            if (canSpawn)
+            {
                 SpawnTentacle(target.position);
+                canSpawn = false;
+                Invoke(nameof(Reload), reloadTime);
+            }
+        }
+
+        // when scream is off CD, always do
+        else
+        {
+            if (!inScream)
+            {
+                int locationIndex = Random.Range(1, tpLocationsSize);
+                transform.position = tpLocations[locationIndex].position;
+
+                for (int i = 0; i < tentacleLocationsSize; i++)
+                {
+                    SpawnTentacle(tentacleLocations[i].position);
+                }
+                Invoke(nameof(ScreamEnd), screamDuration);
+                inScream = true;
+                print("BOSS IS SCREM");
+            }
             else
-                SpawnTentacle(target.position);
-            canSpawn = false;
-            Invoke(nameof(Reload), reloadTime);
+            {
+                targetRB.AddForce((target.position - transform.position).normalized * Time.deltaTime * screamForce, ForceMode2D.Impulse);
+            }
         }
     }
 
     public override void PhaseOne()
     {
         base.PhaseOne();
+        Invoke(nameof(tpHome), 4f);
     }
 
     public override void PhaseTwo()
     {
         base.PhaseTwo();
+        reloadTime = 1.5f;
+
+        Invoke(nameof(ReloadScream), screamReload);
+    }
+
+    public override void OnKill()
+    {
+        CancelInvoke();
+        base.OnKill();
     }
 
     public void SpawnTentacle(Vector2 target)
@@ -73,7 +122,7 @@ public class FearBoss : BossCommonBehavior
             }
         }
 
-        if (notEnoughtentaclesInPool)
+        if (notEnoughTentaclesInPool)
         {
             TentacleAttack t = Instantiate(pooledTentacle).GetComponent<TentacleAttack>();
             t.gameObject.SetActive(false);
@@ -90,5 +139,24 @@ public class FearBoss : BossCommonBehavior
     private void Reload()
     {
         canSpawn = true;
+    }
+
+    private void ReloadScream()
+    {
+        screamAttackCD = true;
+    }
+
+    private void ScreamEnd()
+    {
+        inScream = false;
+        screamAttackCD = false;
+
+        tpHome();
+        Invoke(nameof(ReloadScream), screamReload);
+    }
+
+    private void tpHome()
+    {
+        transform.position = tpLocations[0].position;
     }
 }
