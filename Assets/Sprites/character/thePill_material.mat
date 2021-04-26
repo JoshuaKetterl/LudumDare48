@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: thePill
-  m_Shader: {fileID: -6465566751694194690, guid: 0082a0f9037c8334e8157fccc2e3af01, type: 3}
+  m_Name: thePill_material
+  m_Shader: {fileID: -6465566751694194690, guid: 58aba8ac4c8a9ef4a92293cac881d557, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,8 +19,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Emission:
+        m_Texture: {fileID: 2800000, guid: 10bd8f2819d831947bc3f3446d248b55, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 15c3ab2a87c7ff847a2e31db8f2fe67f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8f0cff1c9590d134fbb9df148bf3c179, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -37,5 +41,5 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_5f591c7ec099409b9de446206e7c0d11: {r: 0.9528302, g: 0.1401417, b: 0, a: 0}
+    - Color_6bb370c31d4643d89e0c0157ee2ae83c: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
