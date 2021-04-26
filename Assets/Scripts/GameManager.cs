@@ -11,13 +11,12 @@ public class GameManager : MonoBehaviour
     public string StageMusicEvent = "";
     FMOD.Studio.EventInstance stageMusic;
     FMOD.Studio.PARAMETER_ID phaseParameterId;
+    FMOD.Studio.PARAMETER_ID beatenParameterId;
 
     //TODO
     /* Player on Death Effect (despawn/respawn, heal boss 50%, back to phase 1)
      * Music Manager - Alter Music based on phase, potentially apply effect based on player health
      * VFX Manager - Alter Visual Queues based on player health
-     * 
-     * 
      */
 
     private void Start()
@@ -29,17 +28,30 @@ public class GameManager : MonoBehaviour
         FMOD.Studio.EventDescription phaseEventDescription;
         stageMusic.getDescription(out phaseEventDescription);
 
+        FMOD.Studio.EventDescription beatenEventDescription;
+        stageMusic.getDescription(out beatenEventDescription);
+
         FMOD.Studio.PARAMETER_DESCRIPTION phaseParameterDescription;
         phaseEventDescription.getParameterDescriptionByName("Music Phase 2", out phaseParameterDescription);
         phaseParameterId = phaseParameterDescription.id;
+
+        FMOD.Studio.PARAMETER_DESCRIPTION beatenParameterDescription;
+        beatenEventDescription.getParameterDescriptionByName("Music Boss Beaten", out beatenParameterDescription);
+        beatenParameterId = beatenParameterDescription.id;
     }
 
     private void Update()
     {
         //Set music parameter to proper phase
-        if(bossManager.phaseTwo)
+        if (bossManager.phaseTwo)
             stageMusic.setParameterByID(phaseParameterId, 1);
         else
             stageMusic.setParameterByID(phaseParameterId, 0);
+
+        //Transition to Stinger if boss is dead
+        if (bossManager.bossBeaten)
+            stageMusic.setParameterByID(beatenParameterId, 1);
+        else
+            stageMusic.setParameterByID(beatenParameterId, 0);
     }
 }

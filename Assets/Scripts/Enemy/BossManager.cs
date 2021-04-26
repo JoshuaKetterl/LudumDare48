@@ -11,6 +11,7 @@ public class BossManager : MonoBehaviour
     [SerializeField] public float maxHP;
 
     public bool phaseTwo = false;
+    public bool bossBeaten = false;
 
     private BossCommonBehavior bossInstance;
     private float currentHP;
@@ -47,6 +48,7 @@ public class BossManager : MonoBehaviour
             else if (currentHP <= 0)
             {
                 vulnerable = false;
+                bossBeaten = true;
                 primaryBossInstance.OnKill();
             }
             else

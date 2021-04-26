@@ -6,7 +6,6 @@ public class PlayerShooting : MonoBehaviour
 {
 
     [SerializeField] private Rigidbody2D firePoint;
-    [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Camera cam;
     [SerializeField] private BulletPool bulletPool;
     [SerializeField] private float reloadTime = 0.25f;
