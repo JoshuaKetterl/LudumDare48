@@ -2064,7 +2064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossManager: {fileID: 2137400661}
   playerManager: {fileID: 1168496602}
-  StageMusicEvent: event:/musicMenu
+  StageMusicEvent: 
 --- !u!4 &2137400663
 Transform:
   m_ObjectHideFlags: 0

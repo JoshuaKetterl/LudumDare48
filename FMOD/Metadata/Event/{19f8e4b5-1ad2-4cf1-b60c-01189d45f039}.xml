@@ -166,7 +166,7 @@
 	</object>
 	<object class="TransitionSourceSound" id="{caf06a2f-0441-4cf4-9a3a-d84e58a60f9a}">
 		<property name="length">
-			<value>1.2857142857142856</value>
+			<value>1.7142857142857142</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{d767cdc4-e8a5-4e73-b517-1308821d751e}</destination>
@@ -179,7 +179,7 @@
 	</object>
 	<object class="TransitionSourceSound" id="{62efbede-16be-4076-af72-13b3d8ba3f3c}">
 		<property name="length">
-			<value>1.2857142857142856</value>
+			<value>1.7142857142857142</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{2ec6e37e-b44e-4e8a-9076-29fb1ba70c1d}</destination>
@@ -209,7 +209,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{28645512-36ee-4e42-9c3a-6a68b4a0ce5c}">
 		<property name="volume">
-			<value>-6</value>
+			<value>-3</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -454,7 +454,7 @@
 	</object>
 	<object class="AutomationPoint" id="{a0137da3-46a8-441e-95d4-f4846b4e3c4b}">
 		<property name="position">
-			<value>1.2857142857142856</value>
+			<value>1.7142857142857142</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -473,7 +473,7 @@
 	</object>
 	<object class="AutomationPoint" id="{9454f6e5-bd03-4cf9-b709-b0b4d886c6cf}">
 		<property name="position">
-			<value>1.2857142857142856</value>
+			<value>1.7142857142857142</value>
 		</property>
 		<property name="value">
 			<value>0</value>
