@@ -11,6 +11,7 @@ TagManager:
   - levelCollider
   - tp
   - cathedralLevelCollider
+  - transition
   layers:
   - Default
   - TransparentFX
