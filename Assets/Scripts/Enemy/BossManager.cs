@@ -10,6 +10,8 @@ public class BossManager : MonoBehaviour
     [SerializeField] public BossCommonBehavior primaryBossInstance;
     [SerializeField] public float maxHP;
 
+    [FMODUnity.EventRef] public string TakeDamageEvent = "";
+
     public bool phaseTwo = false;
     public bool bossBeaten = false;
 
@@ -38,6 +40,7 @@ public class BossManager : MonoBehaviour
         if (vulnerable)
         {
             currentHP -= dmg;
+            FMODUnity.RuntimeManager.PlayOneShot(TakeDamageEvent, transform.position);
 
             if (!phaseTwo && currentHP <= phaseTwoHP)
             {
