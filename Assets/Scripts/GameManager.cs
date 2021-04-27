@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -79,5 +80,7 @@ public class GameManager : MonoBehaviour
     {
         //Switch to next scene here
         stageMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
