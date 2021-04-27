@@ -15,6 +15,8 @@ public class GuiltBoss : BossCommonBehavior
 
     [SerializeField] private SpriteRenderer spriteRenderer;
 
+    [SerializeField] private Transform sourceLocation;
+
     [SerializeField] private float timerDefault = 2.5f;
 
     private float timer;
@@ -63,7 +65,7 @@ public class GuiltBoss : BossCommonBehavior
             if (base.bossManager.phaseTwo)
                 SpreadShot();
             else
-                SingleShot();
+                SingleShot(cachedFirePointTransform, 4f, 4f);
             canShoot = false;
             Invoke(nameof(Reload), reloadTime);
         }
@@ -84,7 +86,7 @@ public class GuiltBoss : BossCommonBehavior
                 //Debug.DrawLine(rayPointTransform.position, bossLineOfSight.point, Color.green);
                 lineRenderer.SetPosition(1, bossLineOfSight.point);
                 lineRenderer.colorGradient = greenColor;
-                
+
                 timer = timerDefault;
                 if (canShoot)
                 {
@@ -149,12 +151,14 @@ public class GuiltBoss : BossCommonBehavior
         timerDefault = 1.5f;
     }
 
-    private void SingleShot()
+    private void SingleShot(Transform origin, float moveSpeed, float ttl)
     {
+        bulletPool.PlaySound(sourceLocation.position);
+
         float angle = (Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg) - 90f;
 
         cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle);
-        base.Shoot(cachedFirePointTransform, 3f, 4f);
+        base.Shoot(cachedFirePointTransform, 4f, 4f);
     }
 
     private void SpreadShot()
@@ -168,7 +172,7 @@ public class GuiltBoss : BossCommonBehavior
         base.Shoot(cachedFirePointTransform, 4f, 4f);
 
         cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle);
-        base.Shoot(cachedFirePointTransform, 4f, 4f);
+        SingleShot(cachedFirePointTransform, 4f, 4f);
 
         cachedFirePointTransform.eulerAngles = new Vector3(0, 0, angle + 15f);
         base.Shoot(cachedFirePointTransform, 4f, 4f);
