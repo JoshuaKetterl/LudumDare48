@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
             {
                 stageMusic.setParameterByID(beatenParameterId, 1);
                 sceneActive = false;
-                EndScene();
+                Invoke(nameof(EndScene), 3f);
             }
             else
             {
@@ -72,6 +72,12 @@ public class GameManager : MonoBehaviour
     private void EndScene()
     {
         animator.SetTrigger("darkLevel");
+        Invoke(nameof(SceneStop), 3f);
+    }
+
+    private void SceneStop()
+    {
+        //Switch to next scene here
         stageMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }

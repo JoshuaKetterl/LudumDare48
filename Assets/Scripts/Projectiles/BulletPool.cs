@@ -8,7 +8,7 @@ public class BulletPool : MonoBehaviour
 
     [FMODUnity.EventRef] public string ShootEvent = "";
 
-    private readonly int maxBullets = 128;
+    private readonly int maxBullets = 256;
     private bool notEnoughBulletsInPool = true;
 
     private int bulletCount = 0;
