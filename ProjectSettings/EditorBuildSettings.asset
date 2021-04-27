@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/title_Scene.unity
     guid: 8d29ab06ef3b9e04da64e0aeeeb4f283
   - enabled: 1
-    path: Assets/Scenes/FearOfDarkBoss.unity
+    path: Assets/Scenes/fearOfDarknessLevel.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/cathedralTest.unity
+    path: Assets/Scenes/guiltBossLevel.unity
     guid: f05bf60b7331db946babd93eeca06fdf
   - enabled: 1
     path: Assets/Scenes/gameOver.unity
