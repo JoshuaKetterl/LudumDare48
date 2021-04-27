@@ -6,12 +6,15 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] BossManager bossManager;
     [SerializeField] PlayerManager playerManager;
+    private Animator animator;
 
     [FMODUnity.EventRef]
     public string StageMusicEvent = "";
     FMOD.Studio.EventInstance stageMusic;
     FMOD.Studio.PARAMETER_ID phaseParameterId;
     FMOD.Studio.PARAMETER_ID beatenParameterId;
+
+    bool sceneActive = true;
 
     //TODO
     /* Player on Death Effect (despawn/respawn, heal boss 50%, back to phase 1)
@@ -21,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        animator = GameObject.FindGameObjectWithTag("transition").GetComponent<Animator>();
+
         //Initialize FMOD Objects
         stageMusic = FMODUnity.RuntimeManager.CreateInstance(StageMusicEvent);
         stageMusic.start();
@@ -42,16 +47,31 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //Set music parameter to proper phase
-        if (bossManager.phaseTwo)
-            stageMusic.setParameterByID(phaseParameterId, 1);
-        else
-            stageMusic.setParameterByID(phaseParameterId, 0);
+        if (sceneActive)
+        {
+            //Set music parameter to proper phase
+            if (bossManager.phaseTwo)
+                stageMusic.setParameterByID(phaseParameterId, 1);
+            else
+                stageMusic.setParameterByID(phaseParameterId, 0);
 
-        //Transition to Stinger if boss is dead
-        if (bossManager.bossBeaten)
-            stageMusic.setParameterByID(beatenParameterId, 1);
-        else
-            stageMusic.setParameterByID(beatenParameterId, 0);
+            //Transition to Stinger if boss is dead
+            if (bossManager.bossBeaten)
+            {
+                stageMusic.setParameterByID(beatenParameterId, 1);
+                sceneActive = false;
+                EndScene();
+            }
+            else
+            {
+                stageMusic.setParameterByID(beatenParameterId, 0);
+            }
+        }
+    }
+
+    private void EndScene()
+    {
+        animator.SetTrigger("darkLevel");
+        stageMusic.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
 }
