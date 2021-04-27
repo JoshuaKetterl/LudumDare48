@@ -408,7 +408,7 @@ PrefabInstance:
       objectReference: {fileID: 1224707063}
     - target: {fileID: 3784840422246688164, guid: b6c485cdfb07d5544b0895b0745bf112, type: 3}
       propertyPath: m_Lens.OrthographicSize
-      value: 0.7
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 3784840422793508036, guid: b6c485cdfb07d5544b0895b0745bf112, type: 3}
       propertyPath: m_FrequencyGain
@@ -432,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3784840423166051202, guid: b6c485cdfb07d5544b0895b0745bf112, type: 3}
       propertyPath: orthographic size
-      value: 0.7
+      value: 0.67
       objectReference: {fileID: 0}
     - target: {fileID: 3784840423166051202, guid: b6c485cdfb07d5544b0895b0745bf112, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -603,7 +603,7 @@ RectTransform:
   m_GameObject: {fileID: 576309635}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.5845137, y: 6.5845137, z: 6.5845137}
+  m_LocalScale: {x: 5.2507544, y: 5.2507544, z: 5.2507544}
   m_Children: []
   m_Father: {fileID: 790767030}
   m_RootOrder: 0
