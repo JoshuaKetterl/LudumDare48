@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    [SerializeField] private int maxHP = 3;
+    [SerializeField] private int maxHP = 5;
     [SerializeField] private float invWindow = 1f;
 
     [FMODUnity.EventRef] public string HealEvent = "";
@@ -88,7 +88,15 @@ public class PlayerManager : MonoBehaviour
     {
         //Debug
         print("Player has died!");
-        gameObject.SetActive(false);
+        animator.SetTrigger("playerDeath");
+        Invoke(nameof(Respawn), 1f);
+
+    }
+
+    private void Respawn()
+    {
+        currentHP = maxHP;
+        transform.position = GameObject.FindGameObjectWithTag("transition").transform.position;
     }
 
     private void MakeVulnerable()
