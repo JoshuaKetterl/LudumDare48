@@ -1702,7 +1702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossManager: {fileID: 1922424729}
   playerManager: {fileID: 1675216501}
-  StageMusicEvent: event:/MusicCathedral
+  StageMusicEvent: event:/musicMenu
 --- !u!4 &1922424731
 Transform:
   m_ObjectHideFlags: 0

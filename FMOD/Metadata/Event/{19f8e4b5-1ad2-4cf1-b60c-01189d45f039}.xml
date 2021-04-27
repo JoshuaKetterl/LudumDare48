@@ -203,14 +203,14 @@
 		<property name="timelockedOffset">
 			<value>1.7142857142857144</value>
 		</property>
-		<property name="volume">
-			<value>-9</value>
-		</property>
 		<relationship name="audioFile">
 			<destination>{ae190b8a-5b47-43f2-b3a6-f9a3e79142e2}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{28645512-36ee-4e42-9c3a-6a68b4a0ce5c}">
+		<property name="volume">
+			<value>-6</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
