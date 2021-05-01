@@ -393,6 +393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39cfc3bce35191b45a7f3e1a6dc4cbe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPool: {fileID: 0}
+  bossManager: {fileID: 2137400661}
 --- !u!1 &690701721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,14 +2042,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137400660}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a30b0fda32b31084d867c46aac91db10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryBossInstance: {fileID: 0}
-  maxHP: 4
-  TakeDamageEvent: event:/playerHit
+  primaryBossInstance: {fileID: 463715789}
+  maxHP: 2
+  TakeDamageEvent: 
   phaseTwo: 0
   bossBeaten: 0
 --- !u!114 &2137400662
@@ -2064,7 +2066,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossManager: {fileID: 2137400661}
   playerManager: {fileID: 1168496602}
-  StageMusicEvent: 
+  timeTransition: 0
+  StageMusicEvent: event:/musicMenu
 --- !u!4 &2137400663
 Transform:
   m_ObjectHideFlags: 0

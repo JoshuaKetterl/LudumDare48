@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] PlayerManager playerManager;
     private Animator animator;
 
+    [SerializeField] private float timeTransition = 3f;
+
     [FMODUnity.EventRef]
     public string StageMusicEvent = "";
     FMOD.Studio.EventInstance stageMusic;
@@ -61,7 +63,7 @@ public class GameManager : MonoBehaviour
             {
                 stageMusic.setParameterByID(beatenParameterId, 1);
                 sceneActive = false;
-                Invoke(nameof(EndScene), 3f);
+                Invoke(nameof(EndScene), timeTransition);
             }
             else
             {
@@ -73,7 +75,7 @@ public class GameManager : MonoBehaviour
     private void EndScene()
     {
         animator.SetTrigger("darkLevel");
-        Invoke(nameof(SceneStop), 3f);
+        Invoke(nameof(SceneStop), timeTransition);
     }
 
     private void SceneStop()
