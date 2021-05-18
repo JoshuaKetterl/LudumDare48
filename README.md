@@ -28,8 +28,8 @@ It is a psychological 2D bullet hell where you fight your inner demons by going 
 
 ## Team Portfolios
 
-* [Michael](https://www.behance.net/michaelyount2)
+* Michael: [Behance](https://www.behance.net/michaelyount2), [Itch.io](https://michaelyount.itch.io/)
 
-* [Grant](https://soundcloud.com/user-756099238)
+* Grant: [Sound Cloud](https://soundcloud.com/user-756099238), [Itch.io](https://grantyoumanywishes.itch.io/)
 
-* [Egor](https://videt.itch.io/)
+* Egor: [Itch.io](https://videt.itch.io/)
