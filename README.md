@@ -25,3 +25,11 @@ It is a psychological 2D bullet hell where you fight your inner demons by going 
 * [Grant](https://github.com/grantyoumanywishes): Music, Sound Design
 
 * [Joshua](https://github.com/JoshuaKetterl) and [Egor](https://github.com/Videt): Code
+
+## Team Portfolios
+
+* [Michael](https://www.behance.net/michaelyount2)
+
+* [Grant](https://soundcloud.com/user-756099238)
+
+* [Egor](https://videt.itch.io/)
