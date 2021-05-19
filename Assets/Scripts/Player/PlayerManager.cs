@@ -64,13 +64,10 @@ public class PlayerManager : MonoBehaviour
                 //trigger invulnerability window
                 vulnerable = false;
                 Invoke(nameof(MakeVulnerable), invWindow);
-                print("Player HP: " + currentHP + " / " + maxHP);
             }
         }
         else
         {
-            //Debug
-            print("Player is invulnerable!");
         }
     }
 
@@ -80,14 +77,10 @@ public class PlayerManager : MonoBehaviour
         if (currentHP < maxHP)
             currentHP++;
 
-        //debug
-        print("Player HP: " + currentHP + " / " + maxHP);
     }
 
     private void OnDeath()
     {
-        //Debug
-        print("Player has died!");
         animator.SetTrigger("playerDeath");
         Invoke(nameof(Respawn), 1f);
 

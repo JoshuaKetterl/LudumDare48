@@ -80,7 +80,6 @@ public class FearBoss : BossCommonBehavior
                 Invoke(nameof(ScreamEnd), screamDuration);
                 FMODUnity.RuntimeManager.PlayOneShot(RoarEvent, transform.position);
                 inScream = true;
-                print("BOSS IS SCREM");
             }
             else
             {

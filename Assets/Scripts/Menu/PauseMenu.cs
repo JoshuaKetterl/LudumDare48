@@ -35,12 +35,10 @@ public class PauseMenu : MonoBehaviour
 
     public void SettingsButton()
     {
-        print("Settings Menu");
     }
 
     public void QuitGame()
     {
-        print("Quit");
         Application.Quit();
     }
 }

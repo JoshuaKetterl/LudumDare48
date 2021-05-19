@@ -34,18 +34,14 @@ public class BossCommonBehavior : MonoBehaviour
 
     public virtual void PhaseOne()
     {
-        print("----------Phase One Initiated!-----------");
     }
 
     public virtual void PhaseTwo()
     {
-        print("----------Phase Two Initiated!-----------");
     }
 
     public virtual void OnKill()
     {
-        //DEBUG
-        print("-------------Boss Destroyed!--------------");
         gameObject.SetActive(false);
     }
 }

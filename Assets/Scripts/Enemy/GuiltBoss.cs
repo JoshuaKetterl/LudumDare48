@@ -77,13 +77,11 @@ public class GuiltBoss : BossCommonBehavior
 
         if (bossLineOfSight.collider != null && bossLineOfSight.collider.transform.parent != null)
         {
-            //Debug.DrawLine(rayPointTransform.position, bossLineOfSight.point, Color.red);
             lineRenderer.SetPosition(1, bossLineOfSight.point);
             lineRenderer.colorGradient = redColor;
 
             if (bossLineOfSight.collider.transform.parent.CompareTag("Player"))
             {
-                //Debug.DrawLine(rayPointTransform.position, bossLineOfSight.point, Color.green);
                 lineRenderer.SetPosition(1, bossLineOfSight.point);
                 lineRenderer.colorGradient = greenColor;
 

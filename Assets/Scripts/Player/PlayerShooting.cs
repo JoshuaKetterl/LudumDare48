@@ -104,10 +104,8 @@ public class PlayerShooting : MonoBehaviour
     {
         Time.timeScale = 0.6f;
 
-        print("Coroutine started");
         yield return new WaitForSeconds(slowMoDuration);
         
-        print("Coroutine ended");
         Time.timeScale = 1f;
     }
 }
